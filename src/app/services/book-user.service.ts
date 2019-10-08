@@ -7,14 +7,14 @@ import { environment } from '@environment/environment';
 })
 export class BookUserService {
 
-  private userUrl = `${environment.bookUserBaseUrl}`;
+  private userUrl = `${environment.baseApi}/auth`;
 
   constructor(private httpClient: HttpClient) { }
 
   public searchUsers(filter: any, limit: number, offset: number) {
     const params: any = {
-      _start: offset.toString(),
-      _limit: limit.toString()
+      page: offset,
+      limit
     };
     Object.keys(filter).forEach(it => {
       if (!filter[it]) {

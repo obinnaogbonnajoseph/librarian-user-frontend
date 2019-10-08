@@ -45,14 +45,13 @@ export class AuthService {
     }
 
     public login(data: any): Observable<any> {
-      return this.httpClient.get(`${environment.bookUserBaseUrl}/1`)
+      return this.httpClient.post(`${environment.baseApi}/auth/login`, data)
       .pipe(map((payload: any) => {
         console.log('login payload...', payload);
-        const testToken = 'test_token';
         AuthService.initialized = false;
         AuthService.ongoingFetch = null;
-        AuthService.newUserToken.next(testToken);
-        return payload;
+        AuthService.newUserToken.next(payload.token);
+        return payload.user;
       }));
 
     }
@@ -87,7 +86,7 @@ export class AuthService {
         const wrapper = new AsyncSubject();
         AuthService.ongoingFetch = wrapper;
 
-        this.httpClient.get(`${environment.bookUserBaseUrl}/1`)
+        this.httpClient.get(`${environment.baseApi}/auth/me`)
           .subscribe((u: any) => {
             const user = new User(u);
             wrapper.next(user);

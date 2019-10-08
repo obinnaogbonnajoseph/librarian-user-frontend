@@ -43,9 +43,10 @@ export class UserComponent implements OnInit {
     this.working = true;
     const offset = ( event.page - 1) * event.itemsPerPage;
     this._offset = offset;
+    const filter = this.form.value;
 
     // get the query results...
-    this.queryResult$ = this.librarianService.fetchBooks(event.itemsPerPage, offset);
+    this.queryResult$ = this.librarianService.fetchBooks(event.itemsPerPage, offset, filter);
     this.working = false;
   }
 

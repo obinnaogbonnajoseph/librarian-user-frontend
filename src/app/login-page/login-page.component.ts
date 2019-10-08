@@ -50,6 +50,16 @@ export class LoginPageComponent implements OnInit {
         // todo: navigate to normal user
         this.router.navigate(['/user']);
       }
+    }, (res) => {
+      console.log('error response on login', res);
+      if (res.status === 401 || res.status === 400) {
+        this.error = 'Username or Password incorrect';
+      } else if (res.status < 1) {
+        this.error = 'Failed to contact server. Please check your internet connection';
+      } else {
+        this.error = 'An error occured. Please try again';
+      }
+      this.loading = false;
     });
   }
 
