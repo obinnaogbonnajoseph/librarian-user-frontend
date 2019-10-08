@@ -1,0 +1,127 @@
+<ng-template #loading>
+  <loader></loader>
+</ng-template>
+
+<div class="page container">
+    <div class="dashboard-header">
+        <div class="container-fluid">
+            <div class="dashboard-heading">User Dashboard</div>
+            <div class="dashboard-breadcrumb" *ngIf="user$ | async as user">
+                <span> Welcome, {{(user.firstName | uppercase) || 'N/A'}} {{(user.lastName | uppercase) || 'N/A'}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card-body p-10">
+          <div class="border-bottom-b1">
+              <h3>Book Collections</h3>
+          </div>
+        <div class="mt-20 form-filter">
+          <div class="form-instructions">
+            Search for books. Narrow down search results, using the options below.
+          </div>
+          <form [formGroup]="form" (submit)="submit()">
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label>Name</label>
+                <input type="text" class="form-control"
+                  placeholder="Book Name" formControlName="name">
+              </div>
+              <div class="form-group col-md-4">
+                  <label>Author</label>
+                  <input type="text" class="form-control"
+                    placeholder="Book Author" formControlName="author">
+              </div>
+              <div class="col-md-4 text-right">
+                  <button class="btn btn-success search mt-4" type="submit" [class.disabled]="!form.valid">
+                      <i class="fa fa-search mr-1" *ngIf="!working"></i>
+                      <i class="fa fa-spinner fa-pulse" *ngIf="working"></i>&nbsp;Search
+                  </button>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+        <div *ngIf="queryResult$ | async as list">
+          <div *ngIf="list && list.length > 0 && !working">
+            <div style="display: inline-block !important;">Show</div>
+            <div class="form-group mr-3 ml-2" style="display: inline-block !important;">
+                <select class="form-control" [(ngModel)]="itemsPerPage" (change)="onItemsPerPageChange()">
+                  <option *ngFor="let count of countPerPage" [value]="count">{{ count }}</option>
+                </select>
+            </div>
+            <div style="display: inline-block !important;">entries</div>
+          </div>
+
+        </div>
+        <div class="clearfix"></div>
+        <div class="table-responsive-md">
+          <table class="table table-sm table-bordered
+            table-striped" *ngIf="queryResult$ | async as list; else loading">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+              </tr>
+              <tr *ngIf="working">
+                  <td colspan="5" class="progressbar">
+                      <progressbar class="progress-striped active" [value]="100" [max]="100" type="success"
+                          [striped]="true" [animate]="true"><i>Please
+                              wait...</i></progressbar>
+                  </td>
+              </tr>
+            </thead>
+            <tbody *ngIf="list">
+              <tr *ngFor="let row of list; index as i">
+                  <td scope="row">{{i+offset+1}}</td>
+                  <td>{{(row.name | uppercase)|| 'N/A'}}</td>
+                  <td>{{(row.author | uppercase)|| 'N/A'}}</td>
+                  <td *ngIf="row.status === 'BORROWED'"
+                      class="text-center">
+                      <span class="badge badge-warning">{{(row.status | uppercase) || 'N/A'}}</span>
+                  </td>
+                  <td *ngIf="row.status !== 'BORROWED'"
+                      class="text-center">
+                      <span class="badge badge-success">{{(row.status | uppercase) || 'N/A'}}</span>
+                  </td>
+                  <td>
+                    <div class="btn-group" dropdown #dropdown>
+                        <button dropdownToggle type="button" class="btn btn-primary btn-sm dropdown-toggle">
+                            Action <span class="caret"></span>
+                        </button>
+                        <ul *dropdownMenu class="dropdown-menu" role="menu">
+                            <li role="menuitem"><a class="dropdown-item" href="" (click)="updateStatus(row); false"
+                                                    [ngSwitch]="row.status">
+                                <ng-container *ngSwitchCase="'BORROWED'">
+                                    <i class="fa fa-long-arrow-left"></i>&nbsp;Return
+                                </ng-container>
+                                <ng-container *ngSwitchCase="'NOT_BORROWED'">
+                                    <i class="fa fa-long-arrow-right"></i>&nbsp;Borrow
+                                </ng-container>
+                            </a></li>
+                        </ul>
+                    </div>
+                  </td>
+              </tr>
+            </tbody>
+            <tbody *ngIf="!list.length && !working">
+              <tr>
+                <td colspan="5" class="text-center">
+                    NO BOOKS IN LIBRARY
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="float-right">
+              <pagination [rotate]="true" [boundaryLinks]="true" previousText="&lsaquo;" nextText="&rsaquo;"
+                firstText="&laquo;" lastText="&raquo;" [totalItems]="totalCount" [itemsPerPage]="itemsPerPage"
+                [maxSize]="10" [(ngModel)]="currentPage" (pageChanged)="onPageChanged($event)">
+              </pagination>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

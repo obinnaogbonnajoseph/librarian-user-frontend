@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="navbar-toggle-wrapper px-sm-15">
+    <div>
+      <span *ngIf="user && (user !== null || user !== undefined)">
+          <a class="g-color-white g-bg-yellow g-bg-yellow--hover g-px-15 g-py-10  font-weight-bold"
+          (click)="logout(); false" href=""><i class="fs-16 fa fa-sign-out mr-1"></i>LOGOUT</a>
+      </span>
+    </div>
+  </div>
+
+</div>

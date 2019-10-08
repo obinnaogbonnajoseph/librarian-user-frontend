@@ -1,0 +1,32 @@
+.footer-style ul li a{
+    text-color:white!important;
+}
+.footer-style ul li a:hover{
+     text-color: #ecaa20!important;
+ }
+
+ .footer-logos{
+     list-style: none;
+     display: flex;
+     margin: 0;
+     padding: 0;
+ }
+
+ .footer-logos li{
+     padding-right: 1em;
+ }
+
+ .footer{
+    border-top: 2px solid #88522C !important;
+ }
+
+ .footer-bg-color{
+     background-color: #3a4644;
+     padding-top: 20px;
+     border-top: 2px solid #477549;
+
+ }
+
+ .footer-border-top{
+     border-top-color: 2px solid #04913D;
+ }

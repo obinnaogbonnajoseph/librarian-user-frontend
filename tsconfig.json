@@ -17,7 +17,21 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@utils/*": [
+        "src/app/utils/*"
+      ],
+      "@environment/*": [
+        "src/environments/*"
+      ],
+      "@models/*": [
+        "src/app/model/*"
+      ],
+      "@authentication/*": [
+        "src/app/authentication/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

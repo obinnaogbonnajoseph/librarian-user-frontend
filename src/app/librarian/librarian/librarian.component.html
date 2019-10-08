@@ -1,0 +1,131 @@
+<ng-template #loading>
+    <loader></loader>
+</ng-template>
+
+<ng-template #confirmDelete>
+  <div class="modal-body text-center">
+    <p>Are you sure you want to delete?</p>
+    <button type="button" class="btn btn-default" (click)="deleteBook(); modalRef.hide()">Yes</button>
+    <button type="button" class="btn btn-primary" (click)="modalRef.hide()">Cancel</button>
+  </div>
+</ng-template>
+<div class="page container">
+    <div class="dashboard-header">
+        <div class="container-fluid">
+            <div class="dashboard-heading">Librarian Dashboard</div>
+            <div class="dashboard-breadcrumb" *ngIf="user$ | async as user">
+                <span> Welcome, {{(user.firstName | uppercase) || 'N/A'}} {{(user.lastName | uppercase) || 'N/A'}}</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="card">
+        <div class="card-body p-10">
+
+            <div class="border-bottom-b1">
+                <h3>Book Collections<span>&nbsp;&nbsp;<a class="btn btn-sm btn-primary"
+                    href="" (click)="addBook(); false"><i class="fa fa-plus"></i>&nbsp;Add Book</a></span></h3>
+            </div>
+
+            <div *ngIf="queryResult$ | async as list">
+                <div *ngIf="list.length && !working">
+                    <div style="display: inline-block !important;">
+                        Show
+                    </div>
+                    <div class="form-group mr-3 ml-2" style="display: inline-block !important;">
+                        <select class="form-control" [(ngModel)]="itemsPerPage" (change)="onItemsPerPageChange()">
+                            <option *ngFor="let count of countPerPage" [value]="count">{{ count }}</option>
+                        </select>
+                    </div>
+                    <div style="display: inline-block !important;">entries</div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="table-responsive-md">
+                <table class="table table-sm table-bordered table-striped" *ngIf="queryResult$ | async as list; else loading">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Lib Number</th>
+                            <th scope="col">Date Created</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        <tr *ngIf="working">
+                            <td colspan="7" class="progressbar">
+                                <progressbar class="progress-striped active"
+                                    [value]="100" [max]="100" type="success"
+                                    [striped]="true" [animate]="true"><i>Please wait...</i>
+                                </progressbar>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="list && list.length > 0">
+                        <tr *ngFor="let row of list; index as i">
+                            <td scope="row">{{i+offset+1}}</td>
+                            <td>{{(row.name | uppercase)|| 'N/A'}}</td>
+                            <td>{{(row.author | uppercase)|| 'N/A'}}</td>
+                            <td>{{(row.libNumber | uppercase)|| 'N/A'}}</td>
+                            <td>{{(row.dateCreated | date)|| 'N/A'}}</td>
+                            <td *ngIf="row.status === 'BORROWED'"
+                                class="text-center">
+                                <span class="badge badge-warning">{{(row.status | uppercase) || 'N/A'}}</span>
+                            </td>
+                            <td *ngIf="row.status !== 'BORROWED'"
+                                class="text-center">
+                                <span class="badge badge-success">{{(row.status | uppercase) || 'N/A'}}</span>
+                            </td>
+                            <td>
+                                <div class="btn-group" dropdown #dropdown>
+                                    <button dropdownToggle type="button"
+                                        class="btn btn-primary btn-sm dropdown-toggle">
+                                            Action <span class="caret"></span>
+                                    </button>
+                                    <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                        <li role="menuitem">
+                                            <a class="dropdown-item"
+                                                href="" (click)="updateBook(row); false">
+                                                    <i class="fa fa-edit"></i>&nbsp;Update
+                                            </a>
+                                        </li>
+                                        <li role="menuitem">
+                                                <a class="dropdown-item"
+                                                    href="" (click)="lendBook(row); false">
+                                                        <i class="fa fa-exchange"></i>&nbsp;Lend
+                                                </a>
+                                        </li>
+                                        <li role="menuitem">
+                                                <a class="dropdown-item"
+                                                    href="" (click)="openDeleteModal(confirmDelete, row); false">
+                                                        <i class="fa fa-trash"></i>&nbsp;Delete
+                                                </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                    <tbody *ngIf="!list.length && !working">
+                        <tr>
+                            <td colspan="7" class="text-center">
+                                NO BOOKS IN LIBRARY
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="float-right">
+                    <pagination [rotate]="true" [boundaryLinks]="true" previousText="&lsaquo;" nextText="&rsaquo;"
+                      firstText="&laquo;" lastText="&raquo;" [totalItems]="totalCount" [itemsPerPage]="itemsPerPage"
+                      [maxSize]="10" [(ngModel)]="currentPage" (pageChanged)="onPageChanged($event)">
+                    </pagination>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

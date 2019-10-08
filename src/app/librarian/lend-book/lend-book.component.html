@@ -1,0 +1,135 @@
+<div class="modal fade" bsModal #childModal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="dialog-nested-name2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div *ngIf="selectedUser">
+              <h4 id="dialog-nested-name2" class="modal-title pull-left">
+                Selected User: {{selectedUser.firstName | uppercase}} {{selectedUser.lastName | uppercase}}</h4>
+          </div>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="childModal.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-instructions" *ngIf="selectedUser">
+            Lend book to {{selectedUser.firstName | uppercase}} {{selectedUser.lastName | uppercase}} ?
+          </div>
+          <button type="button" class="btn btn-default" (click)="lendBook(); childModal.hide()">Yes</button>
+          <button type="button" class="btn btn-primary" (click)="childModal.hide()">Cancel</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loader>
+  <loader></loader>
+</ng-template>
+
+<div class="page container">
+  <div class="card">
+    <div class="card-body p-10">
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Lend Book</h4>
+            <button type="button" class="close pull-right" aria-label="close"
+              (click)="modalRef.hide()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      <div class="mt-20 form-filter">
+        <div class="form-instructions">
+          Search for users. Narrow down search results, using the options below.<br>
+          <b>Click on a row to select the particular user</b>
+        </div>
+        <form [formGroup]="form" (submit)="submit()">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>Username</label>
+              <input type="text" class="form-control"
+                placeholder="Username" formControlName="username">
+            </div>
+            <div class="form-group col-md-4">
+                <label>User ID</label>
+                <input type="text" class="form-control"
+                  placeholder="Enter user ID" formControlName="userId">
+            </div>
+            <div class="col-md-4 text-right">
+                <button class="btn btn-success search mt-4" type="submit" [class.disabled]="!form.valid">
+                    <i class="fa fa-search mr-1" *ngIf="!working"></i>
+                    <i class="fa fa-spinner fa-pulse" *ngIf="working"></i>&nbsp;Search
+                </button>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+      <div *ngIf="queryResult$ | async as list">
+        <div *ngIf="list && list.length > 0 && !working">
+          <div style="display: inline-block !important;">Show</div>
+          <div class="form-group mr-3 ml-2" style="display: inline-block !important;">
+              <select class="form-control" [(ngModel)]="itemsPerPage" (change)="onItemsPerPageChange()">
+                <option *ngFor="let count of countPerPage" [value]="count">{{ count }}</option>
+              </select>
+          </div>
+          <div style="display: inline-block !important;">entries</div>
+        </div>
+
+      </div>
+      <div class="clearfix"></div>
+      <div class="table-responsive-md">
+        <table class="table table-sm table-bordered
+          table-striped" *ngIf="queryResult$ | async as list">
+          <thead>
+            <tr>
+              <!-- <th scope="col"></th> -->
+              <th scope="col">#</th>
+              <th scope="col">Username</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col"> User ID</th>
+            </tr>
+            <tr *ngIf="working">
+                <td colspan="5" class="progressbar">
+                    <progressbar class="progress-striped active" [value]="100" [max]="100" type="success"
+                        [striped]="true" [animate]="true"><i>Please
+                            wait...</i></progressbar>
+                </td>
+            </tr>
+          </thead>
+          <tbody *ngIf="list">
+            <tr *ngFor="let row of list; index as i" (click)="childModal.show(); onSelectUser(row)">
+              <!-- <td>
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input"
+                      id="userChecked" name="userRadio"
+                      [checked]="i == 1"
+                      [value]="row.userId"
+                      tabindex="0"
+                      (change)="onSelectionChange(row); false">
+                    <label class="form-check-label" for="userChecked">&nbsp;</label>
+                  </div>
+              </td> -->
+              <td scope="row">{{i+offset+1}}</td>
+              <td>{{(row.username | uppercase) || 'N/A'}}</td>
+              <td>{{(row.firstName | uppercase) || 'N/A'}}</td>
+              <td>{{(row.lastName | uppercase) || 'N/A'}}</td>
+              <td>{{row.userId || 'N/A'}}</td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="!list.length && !working">
+            <tr>
+              <td colspan="6" class="text-center">
+                NO USERS
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="float-right">
+            <pagination [rotate]="true" [boundaryLinks]="true" previousText="&lsaquo;" nextText="&rsaquo;"
+              firstText="&laquo;" lastText="&raquo;" [totalItems]="totalCount" [itemsPerPage]="itemsPerPage"
+              [maxSize]="10" [(ngModel)]="currentPage" (pageChanged)="onPageChanged($event)">
+            </pagination>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

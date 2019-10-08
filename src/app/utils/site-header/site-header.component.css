@@ -1,0 +1,50 @@
+.mnr-2p5 {
+    margin-right: -2.5rem!important;
+}
+
+.hs-has-sub-menu > a::after {
+    content: "\e900";
+    font-family: "hs-icons" !important;
+    font-size: 10px;
+    display: inline;
+    margin-left: 7px;
+    color: #02a0ed;
+}
+
+.top-15{
+    position: relative;
+    top: 15px;
+}
+
+.site-toolbar.fixed{
+    margin: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+.klics-logo{
+    height:50px; 
+    margin-top:-7px; 
+    margin-bottom:-7px;
+}
+
+@media(max-width: 991px){
+
+    .klics-logo{
+        height:35px; }
+
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .user-login-tag{
+      top: 52px;
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+  }
+  

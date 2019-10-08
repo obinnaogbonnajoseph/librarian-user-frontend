@@ -1,0 +1,18 @@
+a{
+    cursor: pointer;
+}
+
+:host >>> .popover {
+    background-color: #2C8968;
+}
+
+:host >>> .popover-body {
+    color: #fff!important;
+    font-size: 11px;
+    padding: 10px;
+    border-bottom: 2px solid #ecaa20;
+}
+
+:host >>> .popover>.arrow:after {
+    border-top-color: #ecaa20;
+}

@@ -1,0 +1,14 @@
+{
+    "/queryResult": {
+    "target": "http://localhost:3000",
+    "secure": false
+    },
+    "/librarianUser": {
+    "target": "http://localhost:3000",
+    "secure": false
+    },
+    "/bookUser": {
+    "target": "http://localhost:3000",
+    "secure": false
+    }
+}

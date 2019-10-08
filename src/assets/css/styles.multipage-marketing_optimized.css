@@ -1,0 +1,4116 @@
+@charset "UTF-8";
+/*------------------------------------
+  Default Styles
+------------------------------------*/
+html {
+    font-size: 14px; }
+
+body {
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: "Encode Sans", sans-serif;
+    /* line-height: 1.6; */
+    color: #212529;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga", "kern";
+    text-rendering: optimizelegibility;
+    background-color: #fff; }
+
+    h6, h5, h4, h3, h2 {
+      color: #477549
+      ;
+    } 
+
+a {
+    color: #efb225;
+    outline: none; }
+
+a:focus,
+a:hover {
+    color: #e9a811; }
+
+.nav-link {
+    color: #052c52; }
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #052c52; }
+
+figure {
+    margin-bottom: 0; }
+
+/*------------------------------------
+  Headings
+------------------------------------*/
+.h6, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4; }
+
+/*------------------------------------
+  Displays
+------------------------------------*/
+
+/*------------------------------------
+  Highlight Color
+------------------------------------*/
+::-moz-selection {
+    color: #fff;
+    background-color: #477549; }
+
+::selection {
+    color: #fff;
+    background-color: #477549; }
+
+.g-bg-primary ::-moz-selection {
+    color: #477549;
+    background-color: #fff; }
+
+.g-bg-primary ::selection {
+    color: #477549;
+    background-color: #fff; }
+
+/*------------------------------------
+  Components
+------------------------------------*/
+/*------------------------------------
+  Alerts
+------------------------------------*/
+/* Alert Close Button */
+
+/* Alert Lists */
+
+/* Alert Lists with Font Awesome Icons */
+/*------------------------------------
+ Arrows
+------------------------------------*/                            /*------------------------------------
+      Badges
+    ------------------------------------*/
+/*------------------------------------
+  Badges v1
+------------------------------------*/
+/*------------------------------------
+  Badges v2
+------------------------------------*/
+/*------------------------------------
+ Badges v3
+------------------------------------*/
+
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+
+/* Solid Divider */
+
+/* Dotted Divider */
+
+/* Dashed Divider */
+
+/* Double Solid Divider */
+
+/* Double Dashed Divider */
+
+/* Double Dotted Divider */
+
+/* Linear Gradient Divider */     /*------------------------------------
+      Go To v1
+    ------------------------------------*/
+[class*="u-go-to"] {
+    display: none; }
+
+.u-go-to-v1 {
+    width: 3.57143rem;
+    height: 3.57143rem;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #052c52;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    transition: .3s ease-out;
+    z-index: 11; }
+
+.u-go-to-v1 i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.u-go-to-v1:hover, .u-go-to-v1:focus:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #efb225; }
+
+.u-go-to-v1:focus {
+    text-decoration: none;
+    color: #052c52;
+    background-color: rgba(255, 255, 255, 0.7); }
+
+@media (max-width: 575px) {
+    .u-go-to-v1 {
+        -webkit-transform: scale(0.8, 0.8);
+        -ms-transform: scale(0.8, 0.8);
+        transform: scale(0.8, 0.8); } }
+
+/*------------------------------------
+  Go To v2
+------------------------------------*/
+[class*="u-go-to"] {
+    display: none; }
+
+
+
+@media (max-width: 575px) {
+}
+
+/*------------------------------------
+  Go To v3
+------------------------------------*/
+[class*="u-go-to"] {
+    display: none; }
+
+
+@media (max-width: 575px) {
+}
+
+/*------------------------------------
+  Go To v4
+------------------------------------*/
+
+
+@-webkit-keyframes u-go-to-v4 {
+    0% {
+        top: 20%;
+        bottom: 0; }
+    50% {
+        top: 50%;
+        bottom: 0; }
+    100% {
+        top: 20%;
+        bottom: 100%; } }
+
+@keyframes u-go-to-v4 {
+    0% {
+        top: 20%;
+        bottom: 0; }
+    50% {
+        top: 50%;
+        bottom: 0; }
+    100% {
+        top: 20%;
+        bottom: 100%; } }
+
+/*------------------------------------
+  Headers
+------------------------------------*/
+.u-header {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-size: 0.92857rem;
+    z-index: 101; }
+
+.u-header{
+    border-top: 10px solid  #477549;
+}
+
+.u-header [aria-labelledby] {
+    opacity: 0; }
+
+.u-header--sticky-top {
+    position: fixed; }
+
+.u-header--sticky-top {
+    bottom: auto;
+    top: 0; }
+
+.u-header__section {
+    position: relative;
+    z-index: 1; }
+
+.u-header__section:nth-child(1) {
+    z-index: 5; }
+
+.navbar > .container {
+    position: relative; }
+
+@media all and (min-width: 576px) {
+}
+
+@media all and (min-width: 768px) {
+}
+
+@media all and (min-width: 992px) {
+}
+
+@media all and (min-width: 1200px) {
+}
+
+@media all and (max-width: 1199px) {
+}
+
+@media all and (max-width: 991px) {
+{
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .navbar-expand-lg .navbar-collapse {
+        width: 100%;
+        -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+        order: 10; } }
+
+@media all and (max-width: 767px) {
+}
+
+@media all and (max-width: 575px) {
+}
+
+/*------------------------------------
+	Header Togglers
+------------------------------------*/
+
+
+/* Toggler Positioning */
+@media all and (min-width: 0) {
+}
+
+/* Toggler Positioning (sm) */
+@media all and (min-width: 576px) {
+}
+
+/* Toggler Positioning (md) */
+@media all and (min-width: 768px) {
+}
+
+/* Toggler Positioning (lg) */
+@media all and (min-width: 992px) {
+}
+
+/* Toggler Positioning (xl) */
+@media all and (min-width: 1200px) {
+}
+
+/*------------------------------------
+  Fullscreen Header
+------------------------------------*/
+/*------------------------------------
+  Side Header
+------------------------------------*/
+/* Common styles of Side Header */
+
+/* Overlay */
+/* Button Styles
+------------------------------------*/
+/* General Button Styles */
+.btn {
+    position: relative;
+    transition: .2s ease;
+    cursor: pointer; }
+
+.btn:focus, .btn:active:focus {
+    outline: 0 none;
+    box-shadow: none; }
+
+/* Button Content
+------------------------------------*/
+
+/* Buttons Only Icon (O)
+------------------------------------*/
+/* Button Sizes
+------------------------------------*/
+/* Extra Small */
+
+/* Medium */
+
+/* Extra Large */
+
+/* Extramly Large */
+
+/* Button Types
+------------------------------------*/
+/* Inset Buttons */
+
+/* 3d Buttons */
+/* Skew Button */
+/* Button Hovers
+------------------------------------*/
+
+
+/* Hover v1-1 */
+/* Hover v1-2 */
+/* Hover v1-3 */
+/* Hover v1-4 */
+/* Hover v2-1 */
+/* Hover v2-2 */
+/* Button Primary */
+.u-btn-primary {
+    color: #fff;
+    background-color: #efb225; }
+
+.u-btn-primary:hover {
+    border-color: #f2c355;
+    background-color: #f2c355; }
+
+.u-btn-primary:hover, .u-btn-primary:focus {
+    color: #fff; }
+
+
+/* Button White */
+/* Button Black */
+/* Button Dark Gray */
+/* Button Red */
+/* Button Red Tomato */
+/* Button Dark Red */
+/* Button Blue */
+/* Button Indigo */
+/* Button Purple */
+/* Button Dark Purple */
+/* Button Pink */
+/* Button Orange */
+/* Button Deep Orange */
+/* Button Yellow */
+/* Button Aqua */
+/* Button Cyan */
+/* Button Teal */
+/* Button Brown */
+/* Button Bluegrey */
+/* Button Facebook */
+
+
+/* Button Twitter */
+
+
+/* Button Instagram */
+
+
+/* Button VK */
+
+
+/* Button Google Plus */
+
+
+/* Outline Button Primary */
+/* Outline Button White */       /* Outline Button Black */       /* Outline Button Dark Gray */       /* Outline Button Light Gray */       /* Button Outline Red */       /* Button Outline Red Tomato */       /* Outline Button Dark Red */       /* Outline Button Blue */       /* Outline Button Indigo */       /* Outline Button Purple */       /* Outline Button Dark Purple */       /* Outline Button Pink */       /* Outline Button Orange */       /* Outline Button Deep Orange */       /* Outline Button Yellow */       /* Outline Button Aqua */       /* Outline Button Cyan */       /* Outline Button Teal */       /* Outline Button Brown */       /* Outline Button Bluegrey */       /* Button Facebook */
+
+/* Button Twitter */
+
+/* Button Dribbble */
+
+/* Gradient Style v1 */
+/* Gradient Style v2 */
+/* Gradient Style v1 */
+/* Gradient Style v2 */
+/* Material Styles
+------------------------------------*/
+
+/*------------------------------------
+  Material: Floating
+------------------------------------*/
+
+/*------------------------------------
+  Material: Flat
+------------------------------------*/
+
+/*------------------------------------
+  Icons Styles
+------------------------------------*/
+.u-icon-v3
+{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    transition: all .2s ease-in-out; }
+
+.u-icon-v3:hover {
+    text-decoration: none; }
+
+.u-icon-v3::before {
+    display: block; }
+
+.u-icon-v3 > i
+{
+    position: relative;
+    top: 50%;
+    display: block;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2; }
+
+[class*="u-icon-v"] .u-line-icon-pro {
+    -webkit-transform: translateY(-45%);
+    -ms-transform: translateY(-45%);
+    transform: translateY(-45%); }
+
+
+/*------------------------------------
+  Icon-v1
+------------------------------------*/
+/*------------------------------------
+ Icon-v2
+------------------------------------*/
+.u-icon-v3
+{
+    width: 3.92857rem;
+    height: 3.92857rem;
+    font-size: 1.57143rem; }
+
+.u-icon-v3.u-icon-size--xs
+{
+    width: 2.14286rem;
+    height: 2.14286rem;
+    font-size: 0.92857rem; }
+
+
+/*------------------------------------
+  Icon-v3
+------------------------------------*/
+.u-icon-v3
+{
+    width: 3.92857rem;
+    height: 3.92857rem;
+    font-size: 1.57143rem; }
+
+.u-icon-v3.u-icon-size--xs
+{
+    width: 2.14286rem;
+    height: 2.14286rem;
+    font-size: 0.92857rem; }
+
+
+
+
+.u-icon-v3 {
+    background-color: #eee; }
+
+/*------------------------------------
+  Icon-v4
+------------------------------------*/
+.u-icon-v3
+{
+    width: 3.92857rem;
+    height: 3.92857rem;
+    font-size: 1.57143rem; }
+
+.u-icon-v3.u-icon-size--xs
+{
+    width: 2.14286rem;
+    height: 2.14286rem;
+    font-size: 0.92857rem; }
+/*------------------------------------
+ Icon-v4 Additional BG colors
+------------------------------------*/
+
+/*------------------------------------
+  Icon-v4 Social BG colors
+------------------------------------*/
+
+/*------------------------------------
+  Icon-v4 Gradient BG colors
+------------------------------------*/
+
+
+/*------------------------------------
+  Icon-v5
+------------------------------------*/
+.u-icon-v3
+{
+    width: 3.92857rem;
+    height: 3.92857rem;
+    font-size: 1.57143rem; }
+
+.u-icon-v3.u-icon-size--xs
+{
+    width: 2.14286rem;
+    height: 2.14286rem;
+    font-size: 0.92857rem; }
+
+/*------------------------------------
+  Image Icons
+------------------------------------*/
+
+/*------------------------------------
+  Hover Effect of Icon on Block Hover
+------------------------------------*/
+
+/*------------------------------------
+  Scale Effect
+------------------------------------*/
+
+/*------------------------------------
+  Shadow Effect
+------------------------------------*/
+
+/*------------------------------------
+  Slide Effect v1
+------------------------------------*/
+
+
+@-webkit-keyframes toTopFromBottom {
+    49% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%); }
+    50% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%); }
+    51% {
+        opacity: 1; } }
+
+@keyframes toTopFromBottom {
+    49% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%); }
+    50% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%); }
+    51% {
+        opacity: 1; } }
+
+/*------------------------------------
+  Slide Effect v2
+------------------------------------*/
+/*------------------------------------
+  Zoom Effect v1
+------------------------------------*/
+/*------------------------------------
+ Changing a shape Effect
+------------------------------------*/
+
+
+/*------------------------------------
+  Effect v1
+------------------------------------*/     /*------------------------------------
+      Effect v2
+    ------------------------------------*/
+
+
+
+/*------------------------------------
+  Effect v3
+------------------------------------*/
+@-webkit-keyframes spinAround {
+    from {
+        -webkit-transform: translateY(-50%) rotate(0deg);
+        transform: translateY(-50%) rotate(0deg); }
+    to {
+        -webkit-transform: translateY(-50%) rotate(360deg);
+        transform: translateY(-50%) rotate(360deg); } }
+@keyframes spinAround {
+    from {
+        -webkit-transform: translateY(-50%) rotate(0deg);
+        transform: translateY(-50%) rotate(0deg); }
+    to {
+        -webkit-transform: translateY(-50%) rotate(360deg);
+        transform: translateY(-50%) rotate(360deg); } }
+
+
+/*------------------------------------
+  Effect v4
+------------------------------------*/
+
+
+@-webkit-keyframes sonarEffect-default {
+    0% {
+        opacity: .3; }
+    40% {
+        opacity: .5;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #ddd, 0 0 0 10px rgba(255, 255, 255, 0.5); }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #ddd, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0; } }
+
+@keyframes sonarEffect-default {
+    0% {
+        opacity: .3; }
+    40% {
+        opacity: .5;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #ddd, 0 0 0 10px rgba(255, 255, 255, 0.5); }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #ddd, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0; } }
+
+@-webkit-keyframes sonarEffect-primary {
+    0% {
+        opacity: .3; }
+    40% {
+        opacity: .5;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #efb225, 0 0 0 10px rgba(255, 255, 255, 0.5); }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #efb225, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0; } }
+
+@keyframes sonarEffect-primary {
+    0% {
+        opacity: .3; }
+    40% {
+        opacity: .5;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #efb225, 0 0 0 10px rgba(255, 255, 255, 0.5); }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #efb225, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0; } }
+
+/*------------------------------------
+  Effect v5
+------------------------------------*/
+/*------------------------------------
+ Box-shadows Styles
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v1
+------------------------------------*/     /*------------------------------------
+      Box-shadows-v2
+    ------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v3-v4-v5
+------------------------------------*/
+
+
+/*------------------------------------
+  Box-shadows-v6
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v7
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v8
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v9
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v10
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v11
+------------------------------------*/
+.u-shadow-v11 {
+    box-shadow: 0 0 2px #ccc; }
+
+/*------------------------------------
+  Box-shadows-v12
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v13
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v14
+------------------------------------*/
+.u-shadow-v14 {
+    box-shadow: 2px 2px 2px 0 #eee; }
+
+/*------------------------------------
+  Box-shadows-v15
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v16
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v17
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v18
+------------------------------------*/
+.u-shadow-v18 {
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.15); }
+
+/*------------------------------------
+  Box-shadows-v19
+------------------------------------*/
+.u-shadow-v19 {
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.1);
+    border-top: 10px solid #477549;
+}
+
+
+/*------------------------------------
+  Box-shadows-v20
+------------------------------------*/
+.u-shadow-v20 {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05); }
+
+
+/*------------------------------------
+  Box-shadows-v21
+------------------------------------*/
+/*------------------------------------
+ Box-shadows-v22
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v23
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v24
+------------------------------------*/
+/*------------------------------------
+ Box-shadows-v25
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v26
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v27
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v28
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v29
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v30
+------------------------------------*/
+
+/*------------------------------------
+  Form Elements
+------------------------------------*/
+
+.u-form-control::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .3; }
+
+.u-form-control:-ms-input-placeholder {
+    color: inherit;
+    opacity: .3; }
+
+.u-form-control::placeholder {
+    color: inherit;
+    opacity: .3; }
+
+
+.u-form-control::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .3; }
+
+/*------------------------------------
+  States
+------------------------------------*/
+/*------------------------------------
+  Success states
+------------------------------------*/
+/*------------------------------------
+  Success state v1-1
+------------------------------------*/
+
+/*------------------------------------
+  Success state v1-2
+------------------------------------*/
+
+
+/*------------------------------------
+  Error states
+------------------------------------*/
+/*------------------------------------
+  Error state v1
+------------------------------------*/
+
+
+/*------------------------------------
+  Error state v1-2
+------------------------------------*/
+
+/*------------------------------------
+  Error state v1-3
+------------------------------------*/
+
+
+/*------------------------------------
+  Error state v2
+------------------------------------*/
+/*------------------------------------
+ Disabled states
+------------------------------------*/
+/*------------------------------------
+  Disabled state v1
+------------------------------------*/
+/*------------------------------------
+ Checked state colors
+------------------------------------*/
+/* White Colors */
+/*------------------------------------
+ Focus state color
+------------------------------------*/
+/* Primary Colors */
+.g-color-primary:focus {
+    color: #efb225; }
+
+/* Black Colors */
+
+/* White Colors */
+
+/* Gray Colors */
+.g-color-gray-light-v4:focus {
+    color: #eee !important; }
+
+/*------------------------------------
+  Checked state background
+------------------------------------*/
+/* Primary Colors */
+/* Black Colors */
+/* White Colors */
+/* Gray Colors */
+/* Transparent */
+/* Color Red */
+/*------------------------------------
+ Checked state Colors
+------------------------------------*/
+/* Primary Colors */
+/*------------------------------------
+ Focus state background
+------------------------------------*/
+/* Black Colors */
+
+/* Gray Colors */
+/* Transparent */
+
+/*------------------------------------
+  Checked state border
+------------------------------------*/
+/* Primary Colors */
+/* Black Colors */
+/* White */
+/* Gray Colors */
+/* Transparent */
+/* Color Red */
+/*------------------------------------
+ Focus state border
+------------------------------------*/
+/* Primary Colors */
+
+/* Black Colors */
+
+/* White */
+
+/* Gray Colors */     /* Transparent */
+
+/* Color Red */
+
+/*------------------------------------
+  Checked state box shadow
+------------------------------------*/
+
+
+/*------------------------------------
+  Checked state opacity
+------------------------------------*/
+/*------------------------------------
+ Checked state overlay
+------------------------------------*/
+/*------------------------------------
+ Fields
+------------------------------------*/
+
+
+/*------------------------------------
+  Fields Group v1
+------------------------------------*/
+
+
+/*------------------------------------
+  Fields Group v2
+------------------------------------*/
+/*------------------------------------
+  Fields Group v3
+------------------------------------*/
+
+/*------------------------------------
+  Fields Group v4
+------------------------------------*/
+
+/*------------------------------------
+  Checkboxes
+------------------------------------*/
+/*------------------------------------
+  Checkboxes v1
+------------------------------------*/
+
+/*------------------------------------
+  Checkboxes v2
+------------------------------------*/
+
+/*------------------------------------
+  Checkboxes v3
+------------------------------------*/
+
+/*------------------------------------
+  Checkboxes v4
+------------------------------------*/
+
+/*------------------------------------
+  Checkboxes v5
+------------------------------------*/
+
+/*------------------------------------
+  Checkboxes v6
+------------------------------------*/
+/*------------------------------------
+ Checkboxes v7
+------------------------------------*/
+/*------------------------------------
+ Checkboxes v7
+------------------------------------*/
+/* P */
+
+
+/*------------------------------------
+  File Attachments
+------------------------------------*/
+/*------------------------------------
+  File Attachments v1
+------------------------------------*/
+
+/*------------------------------------
+  File Attachments v2
+------------------------------------*/
+/*------------------------------------
+ File Attachments v2
+------------------------------------*/
+
+/*------------------------------------
+  Selects
+------------------------------------*/
+
+/*------------------------------------
+  Selects v1
+------------------------------------*/
+/*------------------------------------
+  Sliders
+------------------------------------*/
+/*------------------------------------
+  Sliders v1
+------------------------------------*/
+/*------------------------------------
+  Sliders v2
+------------------------------------*/
+/*------------------------------------
+  Datepickers
+------------------------------------*/
+/*------------------------------------
+  Datepickers v1
+------------------------------------*/
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Quantity
+------------------------------------*/
+/*------------------------------------
+ Carousel indicators
+------------------------------------*/
+
+/*------------------------------------
+  Carousel indicators v1
+------------------------------------*/
+
+/*------------------------------------
+  Carousel indicators v2
+------------------------------------*/
+
+/*------------------------------------
+  Carousel indicators v3
+------------------------------------*/
+
+/*------------------------------------
+  Carousel indicators v4
+------------------------------------*/
+
+/*------------------------------------
+  Carousel indicators v5
+------------------------------------*/
+
+
+/*------------------------------------
+  Carousel indicators v6
+------------------------------------*/
+
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Carousel indicators v7
+------------------------------------*/
+
+
+/*------------------------------------
+  Carousel indicators v8
+------------------------------------*/
+
+
+/*------------------------------------
+  Carousel indicators v9
+------------------------------------*/
+
+
+@media (min-width: 576px) {
+}
+
+/*------------------------------------
+  Carousel indicators v10
+------------------------------------*/
+
+
+@media (min-width: 576px) {
+}
+
+/*------------------------------------
+  Carousel indicators v11
+------------------------------------*/
+
+/*------------------------------------
+  Carousel indicators v12
+------------------------------------*/
+
+
+/*------------------------------------
+  Carousel indicators v13
+------------------------------------*/
+
+/*------------------------------------
+  Carousel indicators v14
+------------------------------------*/
+/*------------------------------------
+ Carousel indicators v15
+------------------------------------*/
+/*------------------------------------
+ Carousel indicators v16
+------------------------------------*/
+/*------------------------------------
+  Carousel indicators v17
+------------------------------------*/
+/*------------------------------------
+ Carousel indicators v18
+------------------------------------*/
+/*------------------------------------
+  Carousel indicators v19
+------------------------------------*/
+
+
+/*------------------------------------
+  Carousel indicators v20
+------------------------------------*/     /*------------------------------------
+      Carousel indicators v21
+    ------------------------------------*/
+
+
+/*------------------------------------
+  Carousel indicators v22
+------------------------------------*/
+
+/*------------------------------------
+  Carousel indicators v23
+------------------------------------*/
+/*------------------------------------
+  Carousel indicators v24
+------------------------------------*/     /*------------------------------------
+      Carousel indicators v25
+    ------------------------------------*/
+/*------------------------------------
+  Carousel indicators v26
+------------------------------------*/
+/*------------------------------------
+  Carousel indicators v27
+------------------------------------*/
+/*------------------------------------
+  Carousel indicators v28
+------------------------------------*/
+
+
+/*------------------------------------
+  Carousel indicators v29
+------------------------------------*/
+
+
+@media (min-width: 576px) {
+}
+
+/*------------------------------------
+  Carousel indicators v30
+------------------------------------*/
+
+@media (min-width: 576px) {
+}
+
+/*------------------------------------
+  Carousel indicators v31
+------------------------------------*/
+
+
+/*------------------------------------
+  Carousel Indicators v32
+------------------------------------*/
+
+
+/*------------------------------------
+  Carousel indicators v33
+------------------------------------*/
+/*------------------------------------
+  Breadcrumbs v1
+------------------------------------*/
+
+/*------------------------------------
+  Breadcrumbs v2
+------------------------------------*/
+
+
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Dot line v1
+------------------------------------*/
+
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Dot line v2
+------------------------------------*/
+
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Heading-v1
+------------------------------------*/
+/*------------------------------------
+ Heading-v1-1
+------------------------------------*/
+/*------------------------------------
+ Heading-v1-2
+------------------------------------*/
+/*------------------------------------
+ Heading-v1-3
+------------------------------------*/
+/*------------------------------------
+ Heading-v1-4
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v1-5
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v1-6
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v1-7
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v2
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v2-1
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v2-2
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v2-3
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v2-4
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v2-5
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v2-6
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v2-7
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v3
+------------------------------------*/
+/*------------------------------------
+ Heading-v4
+------------------------------------*/
+/*------------------------------------
+ Heading-v5
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v5-1
+------------------------------------*/
+
+
+/*------------------------------------
+  Heading-v5-2
+------------------------------------*/
+
+
+/*------------------------------------
+  Heading-v5-3
+------------------------------------*/
+
+
+/*------------------------------------
+  Heading-v6
+------------------------------------*/
+/*------------------------------------
+ Heading-v6-1
+------------------------------------*/
+/*------------------------------------
+ Heading-v6-1
+------------------------------------*/
+/*------------------------------------
+ Heading-v7
+------------------------------------*/
+/*------------------------------------
+ Heading-v7-1
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v7-3
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v8
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v8-1
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v8-2
+------------------------------------*/
+
+/*------------------------------------
+  Heading-v9
+------------------------------------*/
+/*------------------------------------
+ Headings
+------------------------------------*/
+/* Massive Underline */
+/* Heading With Dot */
+
+/*------------------------------------
+  Nonstandart BG's
+------------------------------------*/
+@media (max-width: 575px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/*------------------------------------
+  Nonstandard-bg
+------------------------------------*/
+/*------------------------------------
+ Nonstandard Background v1
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Nonstandard Background v2
+------------------------------------*/
+
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Nonstandard Background v3
+------------------------------------*/
+
+/*------------------------------------
+  Nonstandard Background v4
+------------------------------------*/
+/*------------------------------------
+  Nonstandard Background v5
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Nonstandard Background v6
+------------------------------------*/
+
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Nonstandard Background v7
+------------------------------------*/
+/*------------------------------------
+  Progress Bars
+------------------------------------*/
+
+/*------------------------------------
+  Progress Bars Sizes
+------------------------------------*/
+
+/*------------------------------------
+  Rating v1
+------------------------------------*/
+
+/*------------------------------------
+  Searchform v1
+------------------------------------*/
+
+
+/*------------------------------------
+  Searchform v2
+------------------------------------*/
+
+.u-searchform-v2 .form-control::-webkit-input-placeholder {
+    opacity: .85; }
+
+.u-searchform-v2 .form-control:-ms-input-placeholder {
+    opacity: .85; }
+
+.u-searchform-v2 .form-control::placeholder {
+    opacity: .85; }
+
+.u-searchform-v2 .form-control::-webkit-input-placeholder {
+    opacity: .85; }
+
+
+/*------------------------------------
+  Searchform v3
+------------------------------------*/
+
+.u-searchform-v3 .form-control::-webkit-input-placeholder {
+    opacity: .85; }
+
+.u-searchform-v3 .form-control:-ms-input-placeholder {
+    opacity: .85; }
+
+.u-searchform-v3 .form-control::placeholder {
+    opacity: .85; }
+
+.u-searchform-v3 .form-control::-webkit-input-placeholder {
+    opacity: .85; }
+
+
+/*------------------------------------
+  Searchform v4
+------------------------------------*/
+
+.u-searchform-v4 .form-control::-webkit-input-placeholder {
+    opacity: 1; }
+
+.u-searchform-v4 .form-control:-ms-input-placeholder {
+    opacity: 1; }
+
+.u-searchform-v4 .form-control::placeholder {
+    opacity: 1; }
+
+.u-searchform-v4 .form-control::-webkit-input-placeholder {
+    opacity: 1; }
+/*------------------------------------
+  Searchform v5
+------------------------------------*/
+.u-searchform-v5 .form-control::-webkit-input-placeholder {
+    opacity: 1; }
+
+.u-searchform-v5 .form-control:-ms-input-placeholder {
+    opacity: 1; }
+
+.u-searchform-v5 .form-control::placeholder {
+    opacity: 1; }
+
+.u-searchform-v5 .form-control::-webkit-input-placeholder {
+    opacity: 1; }
+
+/*------------------------------------
+  Steps v1
+------------------------------------*/
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Steps v2
+------------------------------------*/
+
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Steps v3
+------------------------------------*/
+
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Time Lines
+------------------------------------*/
+
+/*------------------------------------
+  Time Lines v1
+------------------------------------*/
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Time Lines v2
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Time Lines v3
+------------------------------------*/
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Background Colors
+------------------------------------*/
+/*------------------------------------
+ Link Styles
+------------------------------------*/
+
+
+.u-link-v2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden; }
+
+
+
+.u-link-v5 {
+    text-decoration: none;
+    transition: all .2s; }
+
+.u-link-v5:hover, .u-link-v5:focus {
+    text-decoration: none; }
+
+.u-link-v6 {
+    display: block;
+    overflow: hidden; }
+
+.u-link-v6-arrow {
+    margin-left: -50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s; }
+
+.u-link .u-block-hover:hover-v6-arrow, .u-link-v6:hover-v6-arrow {
+    margin-left: 5px;
+    visibility: visible;
+    opacity: 1; }
+
+
+.u-link .u-block-hover:hover-v7-arrow, .u-link-v7:hover-v7-arrow {
+    margin-left: 10px;
+    visibility: visible;
+    opacity: 1; }
+
+/*------------------------------------
+  List Styles
+------------------------------------*/
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Paginations
+------------------------------------*/
+/* Pagination v1 */
+
+
+/* Pagination Style v1 */
+/* Pagination Style v2 */
+/* Pagination Style v3 */
+/* Pagination Style v4 */
+
+
+/* Pagination Style v5 */
+/*------------------------------------
+ Ribbons
+------------------------------------*/
+
+
+/* Ribbon Style Type 1
+------------------------------------*/
+
+
+/* Ribbon Style Type 2
+------------------------------------*/
+
+/* Bookmarked Ribbon
+------------------------------------*/
+/* Ribbon Colors
+------------------------------------*/        /* Clipped-v1 Ribbon
+    ------------------------------------*/
+
+/* Clipped-v2 Ribbon
+------------------------------------*/
+
+/* Clipped-v3 Ribbon
+------------------------------------*/
+
+
+/* Clipped-v4 Ribbon
+------------------------------------*/
+/*------------------------------------
+  Animation on the scroll
+------------------------------------*/
+
+/*------------------------------------
+  Stickers
+------------------------------------*/
+
+/* Sticker Position
+------------------------------------*/
+
+/*------------------------------------
+  Sticky blocks
+------------------------------------*/
+
+/*------------------------------------
+  Tables
+------------------------------------*/
+/*------------------------------------
+ Tabs
+------------------------------------*/
+/* Colors
+------------------------------------*/
+
+
+/* Style for Icons
+------------------------------------*/
+
+/* HZ
+------------------------------------*/
+.nav-item > a,
+.nav-item > .nav-link
+{
+    transition-property: color, background-color, border-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in; }
+
+[role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+[data-tabs-mobile-type="accordion"]):not(
+[data-scroll]) {
+    display: block; }
+
+[role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+[data-tabs-mobile-type="accordion"]):not(
+[data-scroll]) .nav-item {
+    display: inline-block; }
+
+[role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+[data-tabs-mobile-type="accordion"]):not(
+[data-scroll]) .js-tabs-mobile {
+    position: relative;
+    display: none; }
+
+[role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+[data-tabs-mobile-type="accordion"]):not(
+[data-scroll]) .js-tabs-mobile-control {
+    position: relative;
+    display: block; }
+
+[role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+[data-tabs-mobile-type="accordion"]):not(
+[data-scroll]) .js-tabs-mobile-control::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 5px 3.5px 0 3.5px;
+    border-style: solid;
+    border-color: #777 transparent transparent transparent;
+    margin-top: -1px; }
+
+[role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+[data-tabs-mobile-type="accordion"]):not(
+[data-scroll]) .js-tabs-mobile .nav-inner {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid;
+    padding-left: 0; }
+
+[role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+[data-tabs-mobile-type="accordion"]):not(
+[data-scroll]) .js-tabs-mobile .nav-inner .nav-item {
+    display: block;
+    white-space: nowrap; }
+
+[data-scroll]:not([data-tabs-mobile-type="slide-up-down"]):not(
+[data-tabs-mobile-type="accordion"]) {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden; }
+
+[data-scroll]:not([data-tabs-mobile-type="slide-up-down"]):not(
+[data-tabs-mobile-type="accordion"])::-webkit-scrollbar {
+    display: none; }
+
+@-moz-document url-prefix() {
+    [data-scroll]:not([data-tabs-mobile-type="slide-up-down"]):not(
+  [data-tabs-mobile-type="accordion"]) {
+        padding-bottom: 15px; } }
+
+@media (min-width: 768px) {
+    [data-scroll]::-webkit-scrollbar {
+        display: none; }
+    @-moz-document url-prefix() {
+        [data-scroll] {
+            padding-bottom: 15px; } } }
+
+/*------------------------------------
+  Tabs v1
+------------------------------------*/
+/* Tabs v1
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Tabs v2
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Tabs v3
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Tabs v4
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+}
+
+/*------------------------------------
+  Tabs v5
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Tabs v6
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Tabs v7
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Tabs v8
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+@media (max-width: 767px) {
+    [role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+  [data-tabs-mobile-type="accordion"]) {
+        border-color: #efb225; }
+    [role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+  [data-tabs-mobile-type="accordion"]) .nav-item > a,
+    [role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+  [data-tabs-mobile-type="accordion"]) .nav-item > .nav-link,
+    [role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+  [data-tabs-mobile-type="accordion"]) [class*="u-tab-link"]:not([class*="-icon"]) {
+        white-space: nowrap;
+        padding: 5px 10px; }
+    [role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+  [data-tabs-mobile-type="accordion"]) .nav-item > a,
+    [role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+  [data-tabs-mobile-type="accordion"]) .nav-item > .nav-link,
+    [role="tablist"]:not([data-tabs-mobile-type="slide-up-down"]):not(
+  [data-tabs-mobile-type="accordion"]) [class*="u-tab-link"]:not([class*="-icon"]):not(
+  [class*="js-tabs-mobile-control"]) {
+        display: block; }
+}
+
+/*------------------------------------
+  Tags
+------------------------------------*/
+/* Pagination v1 */
+
+/*------------------------------------
+  Text Animation Slideshow
+------------------------------------*/
+/*------------------------------------
+  Text-shadow
+------------------------------------*/
+/*------------------------------------
+ Marker-bg
+------------------------------------*/
+/*------------------------------------
+ Tooltips
+------------------------------------*/      /*------------------------------------
+      Typography
+    ------------------------------------*/
+
+video {
+    max-width: 100%; }
+
+
+/*------------------------------------
+  Navigation
+------------------------------------*/
+/* Base Abstractions */
+
+/* Base stylesheets */
+/* Import */
+/* Main navigation styles */
+/*------------------------------------
+  Navigation Style v1
+------------------------------------*/
+
+
+@media all and (max-width: 1199px) {
+}
+
+/*------------------------------------
+  Navigation Style v2
+------------------------------------*/
+
+
+@media all and (max-width: 1199px) {
+}
+
+/*------------------------------------
+  Navigation Style v3
+------------------------------------*/
+
+@media all and (max-width: 1199px) {
+}
+
+@media all and (max-width: 991px) {
+}
+
+/*------------------------------------
+  Navigation Style v4
+------------------------------------*/
+
+@media all and (max-width: 1199px) {
+}
+
+@media all and (max-width: 991px) {
+}
+
+/*------------------------------------
+  Navigation Style v5
+------------------------------------*/
+
+
+/*------------------------------------
+  Navigation Style v6
+------------------------------------*/
+
+
+@media all and (max-width: 1199px) {
+}
+
+/*------------------------------------
+  Navigation Style v7
+------------------------------------*/
+
+
+@media all and (max-width: 1199px) {
+}
+
+/*------------------------------------
+  Navigation Style v8
+------------------------------------*/
+
+
+@media all and (max-width: 1199px) {
+}
+
+/*------------------------------------
+  Navigation Style v9
+------------------------------------*/
+/* Dropdown navigation styles */
+/*------------------------------------
+  Navigation Dropdown Style v1
+------------------------------------*/
+/*------------------------------------
+  Navigation Dropdown Style v2
+------------------------------------*/
+
+/*------------------------------------
+  Navigation Dropdown Style v3
+------------------------------------*/
+
+/*------------------------------------
+  Navigation Dropdown Style v4
+------------------------------------*/
+
+/*------------------------------------
+  Navigation Dropdown Style v5
+------------------------------------*/
+/*------------------------------------
+ Navigation Dropdown Style Inline
+------------------------------------*/
+
+
+@media all and (min-width: 1200px) {
+}
+
+@media all and (min-width: 992px) {
+}
+
+@media all and (min-width: 768px) {
+}
+
+@media all and (min-width: 576px) {
+}
+
+/*------------------------------------
+  Navigation Dropdown With Columns
+------------------------------------*/
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Navigation Dropdown Static
+------------------------------------*/
+/* Main navigation behaviors */
+/*------------------------------------
+  Navigation Behavior (Overlay)
+------------------------------------*/
+
+/*------------------------------------
+  Navigation Behavior (Push)
+------------------------------------*/      /*------------------------------------
+      Navigation Behavior (Smart)
+    ------------------------------------*/
+
+/* Secondary navigation styles */
+/*------------------------------------
+  Secondary Navigation
+------------------------------------*/
+
+
+/* Sidebar shortcode navigation styles */
+/*------------------------------------
+  Sidebar Navigation
+------------------------------------*/
+@media all and (min-width: 992px) {
+}
+
+
+
+@media all and (max-width: 991px) {
+}
+
+@media all and (max-width: 767px) {
+}
+
+@media all and (max-width: 575px) {
+}
+
+
+/* Override vendor stylesheets */
+.hamburger-inner::before,
+.hamburger-inner::after {
+    background-color: inherit; }
+
+
+/* Overlay */
+
+/* Override necessary navigation styles in side-header pages */
+
+
+/* Scroll on mobile devices */
+@media (max-width: 991px) {
+}
+
+/*------------------------------------
+  Basket Bar
+------------------------------------*/
+/* Container */
+
+/* Bar */
+
+/* Product */
+
+/* Product Image */
+/* Product Remove Button */
+/*------------------------------------
+   Dropdowns
+------------------------------------*/
+
+/* Simple Dropdown */
+
+/* CSS Animation Dropdown */
+
+
+/*------------------------------------
+  Compressed Form
+------------------------------------*/
+
+/*------------------------------------
+  Dropcaps
+------------------------------------*/
+
+
+/*------------------------------------
+  BG Angles
+------------------------------------*/
+
+/* V-1
+------------------------------------*/
+/* Light */
+
+
+/* Dark */
+
+
+/* V-2
+------------------------------------*/
+/* Light */
+
+
+/* Dark */
+
+
+/*------------------------------------
+  Block Hovers
+------------------------------------*/
+[class*="u-block-hover"] {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); }
+
+[class*="u-block-hover"], [class*="u-block-hover"]::before, [class*="u-block-hover"]::after {
+    transition: all .3s ease; }
+
+.u-block-hover [class*="icon-"] {
+    padding: 1px; }
+/*------------------------------------
+Dedicated Properties
+------------------------------------*/
+.u-block-hover:hover, .u-block-hover:focus {
+    /* Opacity */
+    /* Colors */
+    /* Background-colors */ }
+
+
+
+/*------------------------------------
+  Blockquotes
+------------------------------------*/      /*------------------------------------
+      Accordions
+    ------------------------------------*/
+/*------------------------------------
+  Carousels
+------------------------------------*/
+/*------------------------------------
+  Slick Carousel v12
+------------------------------------*/
+
+/* backSlide */
+
+@-webkit-keyframes backSlideOut {
+    25% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px); }
+    75% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px) translateX(-200%); }
+    100% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px) translateX(-200%); } }
+
+@keyframes backSlideOut {
+    25% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px);
+        transform: translateZ(-400px); }
+    75% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px) translateX(-200%);
+        transform: translateZ(-400px) translateX(-200%); }
+    100% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px) translateX(-200%);
+        transform: translateZ(-400px) translateX(-200%); } }
+
+@-webkit-keyframes backSlideIn {
+    0%, 25% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px) translateX(200%); }
+    75% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px); }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0) translateX(0); } }
+
+@keyframes backSlideIn {
+    0%, 25% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px) translateX(200%);
+        transform: translateZ(-400px) translateX(200%); }
+    75% {
+        opacity: .5;
+        -webkit-transform: translateZ(-400px);
+        transform: translateZ(-400px); }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0) translateX(0);
+        transform: translateZ(0) translateX(0); } }
+
+/*--------------------------------------------------
+  Chart Pie v1
+----------------------------------------------------*/
+/*------------------------------------
+ Charts
+------------------------------------*/
+/* Sparkline chart's tooltip */
+
+/*--------------------------------------------------
+  Counter v1
+----------------------------------------------------*/
+/*--------------------------------------------------
+ Counter v6
+----------------------------------------------------*/
+/*------------------------------------
+ Credit cards
+------------------------------------*/
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Dropdowns v1
+------------------------------------*/
+/*------------------------------------
+  Covers
+------------------------------------*/
+
+/*------------------------------------
+  Material: Waves
+------------------------------------*/      /* Firefox Bug: link not triggered */
+
+/*------------------------------------
+  Material: FAB
+------------------------------------*/     /*------------------------------------
+      Chips
+    ------------------------------------*/
+
+/*------------------------------------
+  Info Block v1-1
+------------------------------------*/
+/*--------------------------------------------------
+ Info Block v1-2
+----------------------------------------------------*/
+
+/*------------------------------------
+  Info Block v1-3
+------------------------------------*/
+/*------------------------------------
+ Info Block v1-4
+------------------------------------*/
+
+/*------------------------------------
+  Info Block v1-5
+------------------------------------*/
+/*------------------------------------
+ Info Block v2-1
+------------------------------------*/
+/*------------------------------------
+ Info Block v2-2
+------------------------------------*/
+
+/*------------------------------------
+  Info Block v2-3
+------------------------------------*/
+
+/*------------------------------------
+  Info Block v3-1
+------------------------------------*/
+/* Title */
+
+
+/*------------------------------------
+  Info Block v3-2
+------------------------------------*/
+
+/*------------------------------------
+  Info Block v3-3
+------------------------------------*/
+/* Image */
+
+/* Content */
+
+/* Description */
+
+/*------------------------------------
+  Info Block v3-4
+------------------------------------*/
+/*------------------------------------
+ Info Block v5-1
+------------------------------------*/
+/* Title */
+/*------------------------------------
+ Info Block v5-2
+------------------------------------*/
+/* Product Image */
+
+/*------------------------------------
+  Info Block v5-3
+------------------------------------*/
+/*------------------------------------
+ Info Block v5-4
+------------------------------------*/
+/* Actions */
+/*------------------------------------
+ Info Block v5-5
+------------------------------------*/
+
+/*------------------------------------
+  Info Block v5-6
+------------------------------------*/
+
+/*--------------------------------------------------
+  Info Block v6-1
+----------------------------------------------------*/
+
+/*--------------------------------------------------
+  Info Block v7-1
+----------------------------------------------------*/
+/*--------------------------------------------------
+ Info Block v8-1
+----------------------------------------------------*/
+
+
+
+/*--------------------------------------------------
+  Info Block v9-1
+----------------------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/*--------------------------------------------------
+  Info Block v10-1
+----------------------------------------------------*/
+
+
+/*------------------------------------
+  Custom Bootstrap
+------------------------------------*/
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+/* Paginations */
+.form-control {
+    border-color: #ccc; }
+
+
+
+.form-control,
+.form-control:focus {
+    color: #052c52; }
+
+.form-control:focus
+{
+    border-color: #efb225;
+    box-shadow: none; }
+
+.form-control::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .5; }
+
+.form-control:-ms-input-placeholder {
+    color: inherit;
+    opacity: .5; }
+
+.form-control::placeholder {
+    color: inherit;
+    opacity: .5; }
+
+
+
+.input-group .form-control:active,
+.input-group .form-control:focus,
+.input-group .form-control:hover {
+    z-index: auto; }
+
+
+
+@media (min-width: 768px) {
+}
+
+
+.dropdown-item {
+    padding: 0.21429rem 1.07143rem; }
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background: rgba(0, 0, 0, 0.03); }
+
+.dropdown-item:active {
+    background: rgba(0, 0, 0, 0.05);
+    color: inherit !important; }
+
+.dropdown-item:active > a {
+    color: inherit !important; }
+
+.dropdown-item:active > a::before, .dropdown-item:active > a::after {
+    background-color: #fff; }
+/*------------------------------------
+ Border Colors
+------------------------------------*/
+/* Primary Colors */
+/* Black Colors */
+
+/* White Colors */
+/* Gray Colors */     /* Transparent */
+
+/*------------------------------------
+  Background Colors
+------------------------------------*/
+/* Primary Colors */
+
+/*------------------------------------
+  Colors
+------------------------------------*/
+/* Primary Colors */
+
+/* Black Colors */
+
+/* White Colors */
+
+/* Gray Colors */     /*--------------------------------------------------
+      Fancybox
+    ----------------------------------------------------*/
+/* Blur bg container */
+/*--------------------------------------------------
+ Hamburgers
+----------------------------------------------------*/
+.hamburger {
+    padding: 10px; }
+
+.hamburger-box {
+    width: 37px;
+    height: 25px; }
+
+.hamburger-inner {
+    margin-top: 1px; }
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+    width: 100%;
+    height: 1px;
+    border-radius: 0; }
+
+.hs-has-sub-menu:not(.hs-sub-menu-opened) * {
+    transition: none !important; }
+
+.hs-has-sub-menu:not(.hs-sub-menu-opened) *::before,
+.hs-has-sub-menu:not(.hs-sub-menu-opened) *::after {
+    transition: none !important; }
+
+
+
+/*------------------------------------
+  jQuery UI
+------------------------------------*/     /*------------------------------------
+      Pin Map
+    ------------------------------------*/
+/*------------------------------------
+ Border Colors
+------------------------------------*/
+/* Primary Colors */
+
+/*------------------------------------
+  Border Width
+------------------------------------*/
+
+/*------------------------------------
+  Box shadows
+------------------------------------*/
+
+/*------------------------------------
+  Dot line v1
+------------------------------------*/
+
+/*------------------------------------
+  Dot line v2
+------------------------------------*/
+/*------------------------------------
+ JS
+------------------------------------*/
+/*--------------------------------------------------
+  Filter v1
+----------------------------------------------------*/
+/*--------------------------------------------------
+ Carousel v10
+----------------------------------------------------*/
+
+@media only screen and (max-width: 991px) {
+}
+
+/*------------------------------------
+  Internet Explorer (IE)
+------------------------------------*/
+/* Text Gradients */
+
+.IE .form-control:-ms-input-placeholder {
+    opacity: 1; }
+
+/*------------------------------------
+  Demo of Icons
+------------------------------------*/
+/* Add here all your css styles (customizations) */
+/*------------------------------------
+  Globals
+------------------------------------*/
+/* Text */
+
+/* Puller */
+
+
+/* Link overlay */
+
+/* P */
+
+/*------------------------------------
+  Background Attachment
+------------------------------------*/
+
+/*------------------------------------
+  Background Gradient Colors
+------------------------------------*/
+/* Simple Linear Gradients
+------------------------------------*/
+/* Gray Light v1 */
+
+/* White v1 */
+
+/* Linear Gradients
+------------------------------------*/
+/* Gray Gradient */
+
+/* Blue Pink Gradient */
+
+/* Blue Gradient */
+/* Orange Gradient */
+/* Yellow Gradient */
+
+/* Dark Purple Gradient */
+
+/* Blue Gray Gradient */
+
+/* Pink Gradient */
+
+/* Pink-v2 Gradient */
+
+/* Red Gradient */
+
+/* Black Gradient */
+
+/* Green Gradient */
+
+/* Purple Gradient */
+
+/* Pink Light Gradient */
+
+/* Cyan Gradient */
+
+/* Purple Gradient */
+
+/* Primary Gradient */
+
+/* Gray Gradient */
+
+/* White Gradient */
+
+/* White Gradient */
+
+/* White Gradient */
+
+/* White Gradient */
+
+/* White Gradient */
+.g-bg-white-gradient-opacity-v5--after::after {
+    background-image: linear-gradient(to right, white 47%, rgba(255, 255, 255, 0) 75%);
+    background-repeat: repeat-x; }
+
+/* Bluegray Gradient */
+
+/* Bluegray Gradient */
+
+/* Bluegray Gradient */
+
+/* Radial Gradients (Ellipse)
+------------------------------------*/
+/* Lightblue Gradient */
+
+/* Gray Gradient */
+
+/* Gray Gradient */
+
+/*  Radial Gradients (Circle)
+------------------------------------*/
+/* Lightblue Gradient */
+
+/* Blue Gradient */
+
+/* Dark Gray Gradient */
+
+/*------------------------------------
+  Background Colors
+------------------------------------*/
+/* Basic Colors
+------------------------------------*/
+/* Main Colors */
+
+
+/* Main Secondary */
+
+.g-bg-secondary {
+    background-color: #fafafa !important; }
+
+.g-bg-secondary {
+    background-color: #f8f8f9; }
+
+/* Primary Colors */
+.g-bg-primary {
+    background-color: #477549!important; }
+
+.g-bg-primary--hover:hover {
+    background-color: #389e24 !important; }
+
+/* Black Colors */
+.g-bg-black-opacity-0_3--after::after {
+    background-color: rgba(0, 0, 0, 0.01) !important; }
+.g-bg-black-opacity-0_3 {
+    background-color: rgba(0, 0, 0, 0.3) !important; }
+
+.g-bg-black-opacity-0_4--hover:hover {
+    background-color: rgba(0, 0, 0, 0.6) !important; }
+
+.g-bg-black-opacity-0_4--after::after {
+    background-color: rgba(0, 0, 0, 0.6) !important; }
+
+.g-bg-black-opacity-0_5--hover:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important; }
+
+.g-bg-black-opacity-0_5--after::after {
+    background-color: rgba(0, 0, 0, 0.5) !important; }
+
+.g-bg-black-opacity-0_6 {
+    background-color: rgba(0, 0, 0, 0.6) !important; }
+
+.g-bg-black-opacity-0_6--hover:hover {
+    background-color: rgba(0, 0, 0, 0.7) !important; }
+/* White Colors */
+.g-bg-white {
+    background-color: #fff !important; }
+
+
+
+.g-bg-white-opacity-0_8 {
+    background-color: rgba(255, 255, 255, 0.8) !important; }
+
+
+/* Gray Colors */
+.g-bg-gray-light-v5 {
+    background-color: #f7f7f7 !important; }
+
+/* Transparent */
+.g-bg-transparent {
+    background-color: transparent !important; }
+
+
+/* Complementary Colors
+------------------------------------*/
+/* Beige Colors */
+
+/* Color Green */
+
+/* Color Blue */
+/* Color Light Blue */
+
+
+/* Color Dark Blue */
+/* Color Indigo */
+/* Color Red */
+
+/* Color Light Red */
+
+/* Color Dark Red */
+/* Color Purple */
+
+/* Color Dark Purple */
+/* Color Pink */
+
+/* Color Orange */
+
+
+/* Color Deep Orange */
+
+/* Color Yellow */
+
+
+/* Color Aqua */
+
+
+/* Color Cyan */
+/* Color Teal */
+/* Color Brown */
+
+/* Color Blue Gray */
+
+
+
+/* O */
+@media (min-width: 576px) {
+}
+
+/*------------------------------------
+  Background Colors Extended
+------------------------------------*/
+
+/*------------------------------------
+  Social Background Colors
+------------------------------------*/
+/* Facebook */
+/* Twitter */
+/* Skype */
+/* Pinterest */
+/* Vine */
+/* Youtube */
+/* Google plus */
+/* Dribbble */
+/* VK */
+/* Linkedin */
+/* Instagram */
+/*------------------------------------
+ Images Grid
+------------------------------------*/
+/*------------------------------------
+ Covers
+------------------------------------*/
+.g-bg-cover {
+    position: relative; }
+
+.g-bg-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+
+/*------------------------------------
+ Background Image Style
+------------------------------------*/
+.g-bg-img-hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+/*------------------------------------
+  Background Patterns
+------------------------------------*/
+
+/*------------------------------------
+  Background Position
+------------------------------------*/
+
+
+.g-bg-pos-top-center {
+    background-position: top center; }
+
+
+/*------------------------------------
+  Background Repeat
+------------------------------------*/
+
+/*------------------------------------
+  Background Size
+------------------------------------*/
+.g-bg-size-cover {
+    background-size: cover !important; }
+
+/* Primary Colors */
+/*------------------------------------
+  Borders Default (solid)
+------------------------------------*/
+.g-brd-none {
+    /* P */
+    border: none !important; }
+
+
+
+.g-brd-around {
+    border: solid 1px transparent !important; }
+
+
+
+.g-brd-bottom {
+    border-bottom: solid 1px transparent !important; }
+
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+    /* P */
+}
+
+/*------------------------------------
+  Borders None
+------------------------------------*/
+
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Border Style
+------------------------------------*/
+
+/*------------------------------------
+  Border Radius (Rounded Styles)
+------------------------------------*/
+/* Rounded Around */      /* Rounded Top */
+
+/* Rounded Right */
+/* Rounded Bottom */
+
+
+/* Rounded Left */
+
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Borders Default (dashed)
+------------------------------------*/
+
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Borders Default (dotted)
+------------------------------------*/
+
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Border Width
+------------------------------------*/
+
+
+.g-brd-2 {
+    border-width: 2px !important; }
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Border Colors
+------------------------------------*/
+/* Basic Colors
+------------------------------------*/
+/* Primary Colors */
+.g-brd-primary {
+    border-color: #27AD61 !important; }
+
+.g-brd-primary--hover:hover {
+    border-color: #27AD61 !important; }
+
+
+
+
+.g-brd-primary-dark-dark-v1 {
+    border-color: #eeaf1b !important; }
+
+
+
+/* Main Colors */
+/* Black Colors */
+
+
+/* White Colors */
+/* Gray Colors */
+
+
+.g-brd-gray-light-v4 {
+    border-color: #eee !important; }
+
+.g-brd-gray-light-v4--hover:hover {
+    border-color: #eee !important; }
+
+
+.g-brd-gray-light-v5 {
+    border-color: #f7f7f7 !important; }
+
+/* Transparent */
+/* Complementary Colors
+------------------------------------*/
+/* Color Green */
+
+
+/* Color Blue */
+
+/* Color Light Blue */
+
+/* Color Dark Blue */
+
+/* Color Indigo */
+
+/* Color Red */
+
+/* Color Light Red */
+
+/* Color Dark Red */
+
+/* Color Purple */
+
+/* Color Dark Purple */
+
+/* Color Pink */
+
+/* Color Orange */
+
+/* Color Deep Orange */
+
+/* Color Yellow */
+
+/* Color Aqua */
+
+/* Color Cyan */
+
+/* Color Teal */
+
+/* Color Brown */
+
+/* Color Blue Gray */
+
+/* Primary Colors */
+/* Black Colors */
+
+
+/* White */        /* Gray Colors */
+/* Transparent */
+
+
+/* Complementary Colors
+------------------------------------*/
+/* Color Green */
+
+
+/* Color Blue */
+
+
+/* Color Light Blue */
+
+/* Color Dark Blue */
+
+
+/* Color Indigo */
+
+
+/* Color Red */
+
+
+/* Color Light Red */
+
+
+/* Color Dark Red */
+
+
+/* Color Purple */
+
+
+/* Color Dark Purple */
+
+
+/* Color Pink */
+
+
+/* Color Orange */
+
+
+/* Color Deep Orange */
+
+
+/* Color Yellow */
+
+
+/* Color Aqua */
+
+
+/* Color Cyan */
+
+
+/* Color Teal */
+
+
+/* Color Brown */
+
+
+/* Color Blue Gray */
+
+
+/* O */
+/*------------------------------------
+  Social Border Colors
+------------------------------------*/
+/* Facebook */
+/* Twitter */
+/* Skype */
+/* Pinterest */
+/* Vine */
+/* Youtube */
+/* Google plus */
+/* Dribbble */
+/* VK */
+/* Linkedin */
+/* Instagram */
+/*------------------------------------
+ Border Gradient Colors
+------------------------------------*/
+/* Cyan Gradient */
+
+/*------------------------------------
+  Typography Font Family
+------------------------------------*/
+
+/*------------------------------------
+  Typography Font Size
+------------------------------------*/
+
+.g-font-size-11 {
+    font-size: 0.78571rem !important; }
+
+.g-font-size-12 {
+    font-size: 0.75714rem !important; }
+
+.g-font-size-13 {
+    font-size: 0.92857rem !important; }
+
+
+.g-font-size-15 {
+    font-size: 1.07143rem !important; }
+
+.g-font-size-16 {
+    font-size: 1.14286rem !important; }
+
+
+.g-font-size-18 {
+    font-size: 1.28571rem !important; }
+
+.g-font-size-35 {
+    font-size: 2.5rem !important; }
+
+
+
+.g-font-size-50 {
+    font-size: 3.57143rem !important; }
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (max-width: 575px) {
+}
+
+/*------------------------------------
+  Typography Font Weight
+------------------------------------*/
+
+
+.g-font-weight-500 {
+    font-weight: 500 !important; }
+
+.g-font-weight-600 {
+    font-weight: 600 !important; }
+
+
+@media (min-width: 768px) {
+}
+
+/*------------------------------------
+  Typography Text Transform
+------------------------------------*/
+
+/*------------------------------------
+  Typography Text Decoration
+------------------------------------*/
+
+.g-text-underline--none--hover:focus, .g-text-underline--none--hover:hover {
+    text-decoration: none; }
+
+
+/*------------------------------------
+  Typography Letter Spacing
+------------------------------------*/
+/*------------------------------------
+  Typography Line Height
+------------------------------------*/
+
+
+.g-line-height-1 {
+    line-height: 1 !important; }
+
+
+
+.g-line-height-2 {
+    line-height: 2 !important; }
+
+/*------------------------------------
+  Typography Font Style
+------------------------------------*/
+/*------------------------------------
+ List Style Types
+------------------------------------*/
+/*------------------------------------
+ Text Types
+------------------------------------*/
+
+/*------------------------------------
+  Quotes
+------------------------------------*/
+/* Quote v1 */
+/*------------------------------------
+ Positions
+------------------------------------*/
+.g-pos-rel { }
+
+.g-pos-abs {
+    position: absolute !important; }
+
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Position Spaces
+------------------------------------*/
+/* Top */
+
+
+
+.g-top-10 {
+    top: 0.71429rem !important; }
+
+
+/* Top Minis */
+.g-top-minus-1 {
+    top: -0.07143rem; }
+/* Left */
+/* Left Minus */
+/* Right */
+
+.g-right-0 {
+    right: 0; }
+
+
+/* Right Minus */     /* Bottom */
+
+
+/* Z */
+@media (min-width: 576px) {
+}
+
+/* O */
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Block Alignments
+------------------------------------*/
+/* Absolute (Position, X, Y) */
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/* O */
+
+/* Relative (Position, X, Y) */
+
+/* Flex centered */
+
+
+/* Flex right */
+
+/* Flex middle */
+
+
+
+@media (min-width: 768px) {
+    /* Flex right */
+    /* O */
+}
+
+/* Z */
+@media (min-width: 576px) {
+}
+
+/* O */
+@media (min-width: 576px) {
+}
+
+/*------------------------------------
+  Alignments
+------------------------------------*/
+/*------------------------------------
+  Blur
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows
+------------------------------------*/
+
+/*------------------------------------
+  Clear
+------------------------------------*/
+
+/*------------------------------------
+  Cursors
+------------------------------------*/
+.g-cursor-pointer {
+    cursor: pointer; }
+
+/*------------------------------------
+  Overflows
+------------------------------------*/
+
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Transitions
+------------------------------------*/
+/*.g-transition {
+  &-0_2 {
+    transition: .2s ease-out;
+  }
+  &-0_3 {
+    transition: .3s ease-out;
+  }
+  &-0_6 {
+    transition: .6s ease-out;
+    &-ease {
+      transition: .6s ease;
+    }
+  }
+}
+
+[class*="g-color-"][class*="--hover"] {
+  transition: color .2s ease-out;
+}
+[class*="g-bg-"][class*="--hover"] {
+  transition: background-color .3s ease-out;
+}
+[class*="g-color-"][class*="--hover"][class*="g-bg-"][class*="--hover"] {
+  transition: .3s ease-out;
+}*/
+[class*="g-transition"] {
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-delay: 0s; }
+
+[class*="g-transition"]::before, [class*="g-transition"]::after
+{
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-delay: 0s; }
+
+
+
+.g-transition-0_3 {
+    transition-duration: .3s; }
+
+.g-transition-0_3::before, .g-transition-0_3::after
+{
+    transition-duration: .3s; }
+
+/*------------------------------------
+  Transforms
+------------------------------------*/            /*------------------------------------
+      Opacity
+    ------------------------------------*/
+/*------------------------------------
+  Z-Index
+------------------------------------*/
+
+.g-z-index-1 {
+    z-index: 1; }
+
+
+/*------------------------------------
+  Resize
+------------------------------------*/
+
+/*------------------------------------
+  Placeholder
+------------------------------------*/
+.g-placeholder-white::-webkit-input-placeholder {
+    opacity: 1;
+    color: #fff; }
+.g-placeholder-white:-ms-input-placeholder {
+    opacity: 1;
+    color: #fff; }
+.g-placeholder-white::placeholder {
+    opacity: 1;
+    color: #fff; }
+
+.g-placeholder-white::-webkit-input-placeholder {
+    opacity: 1;
+    color: #fff; }
+
+.g-placeholder-primary::-webkit-input-placeholder {
+    color: #fff; }
+
+.g-placeholder-primary:-ms-input-placeholder {
+    color: #fff; }
+
+.g-placeholder-primary::placeholder {
+    color: #fff; }
+
+.g-placeholder-inherit::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 1; }
+
+.g-placeholder-inherit:-ms-input-placeholder {
+    color: inherit;
+    opacity: 1; }
+
+.g-placeholder-inherit::placeholder {
+    color: inherit;
+    opacity: 1; }
+
+
+.g-placeholder-inherit::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 1; }
+
+/*------------------------------------
+  Offsets
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+/*------------------------------------
+  Colors
+------------------------------------*/
+/* Basic Colors
+------------------------------------*/
+/* Inherit Colors */
+
+/* Main Colors */
+.g-color-main {
+    color: #052c52 !important; }
+
+
+/* Primary Colors */
+.g-color-primary {
+    color: #efb225 !important; }
+
+.u-block-hover:hover .g-color-primary--hover, .g-color-primary--hover:hover {
+    color: #efb225 !important; }
+
+
+/* Secondary Colors */
+
+/* Black Colors */
+/* White Colors */
+.g-color-white {
+    color: #fff !important; }
+
+
+.u-block-hover:hover .g-color-white--hover, .g-color-white--hover:hover {
+    color: #fff !important; }
+
+/* Gray Colors */
+
+.g-color-gray-light-v4 {
+    color: #eee !important; }
+
+/* Complementary Colors
+------------------------------------*/
+/* Color Green */
+
+/* Color Blue */
+
+/* Color Light Blue */
+
+
+/* Color Dark Blue */
+/* Color Indigo */
+/* Color Red */
+
+/* Color Light Red */
+/* Color Dark Red */
+/* Color Purple */
+
+/* Color Dark Purple */
+/* Color Pink */
+
+/* Color Orange */
+/* Color Deep Orange */
+/* Color Yellow */
+/* Color Aqua */
+
+/* Color Cyan */
+/* Color Teal */
+/* Color Brown */
+/* Color Blue Gray */
+/*------------------------------------
+ Social Colors
+------------------------------------*/
+/* Facebook */
+
+/* Twitter */
+
+/* Skype */
+
+/* Pinterest */
+
+/* Vine */
+
+/* Youtube */
+
+/* Google plus */
+
+/* Dribbble */
+
+/* VK */
+
+/* Linkedin */
+
+/* Instagram */
+
+/*------------------------------------
+  Gradient Colors
+------------------------------------*/
+/* Cyan Gradient */
+
+/* Blue Gradient */
+
+/*------------------------------------
+  Widths
+------------------------------------*/
+/* Width in Percentage (%) */
+
+
+@media (max-width: 445px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+    /* P */
+}
+
+
+/* Max Width in Percentage (%) */
+
+/* Min Width in Percentage (%) */
+
+/* Width Viewport Width (vw) */
+
+.g-width-100 {
+    width: 100px !important;  }
+@media (min-width: 576px) {
+    .g-width-100--sm {
+        width: 100px !important;}
+}
+
+/* Width in Pixels (px) */
+
+.g-width-40 {
+    width: 40px !important;
+    /* P */ }
+
+
+/*Logo for Home Page*/
+
+.g-width-160 {
+    width: 160px !important;
+    /* P */ }
+
+
+
+.g-width-200 {
+    width: 200px !important;
+    /* P */ }
+
+
+/* Max Width in Pixels (px) */
+
+/* Min Width in Pixels (px) */
+
+
+.g-min-width-220 {
+    min-width: 220px; }
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/*------------------------------------
+  Heights
+------------------------------------*/
+/* Height in Percentage (%) */
+
+/* Max Height in Percentage (%) */
+
+/* Max Height in Viewport Height (vh) */
+/* Min Height in Percentage (%) */
+
+/* Height  in Viewport Height (vh) */
+
+/* Min Height in Viewport Height (vh) */
+
+/* Auto Height */
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/* Height in Pixels (px) */
+
+
+
+.g-height-40 {
+    height: 40px; }
+
+
+/* Min Height in Pixels (px) */
+
+
+@media (min-width: 576px) {
+}
+
+@media (max-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/*------------------------------------
+  Margin Spaces
+------------------------------------*/
+
+.g-mt-minus-20 {
+    margin-top: -1.42857rem !important; }
+/* Margin Spaces (xs)
+------------------------------------*/
+@media (min-width: 0) {
+    .g-mx-15 {
+        margin-left: 1.07143rem !important;
+        margin-right: 1.07143rem !important; }
+    .g-mt-2 {
+        margin-top: 0.14286rem !important; }
+    .g-mt-18 {
+        margin-top: 1.28571rem !important; }
+    .g-mb-5 {
+        margin-bottom: 0.35714rem !important; }
+    .g-mb-20 {
+        margin-bottom: 1.42857rem !important; }
+    .g-mb-20 {
+        margin-bottom: 1.42857rem !important; }
+    .g-mb-30 {
+        margin-bottom: 2.14286rem !important; }
+    .g-mb-50 {
+        margin-bottom: 3.57143rem !important; }
+    .g-ml-minus-4 {
+        margin-left: -0.28571rem !important; }
+    .g-ml-20 {
+        margin-left: 1.42857rem !important; }
+}
+
+/* Margin Spaces (sm)
+------------------------------------*/
+@media (min-width: 576px) {
+}
+
+/* Margin Spaces (md)
+------------------------------------*/
+@media (min-width: 768px) {
+    .g-ml-40--md {
+        margin-left: 2.85714rem !important; }
+}
+
+/* Margin Spaces (lg)
+------------------------------------*/
+@media (min-width: 992px) {
+    .g-mb-0--lg {
+        margin-bottom: 0 !important; }
+    .g-mx-3--lg {
+        margin-left: 0.21429rem !important;
+        margin-right: 0.21429rem !important; }
+}
+
+/* Margin Spaces (xl)
+------------------------------------*/
+/* P */
+@media (min-width: 1200px) {
+}
+
+/* Margins Around
+------------------------------------*/
+
+
+/* Minus Margins
+------------------------------------*/
+/* Minus Margin Top */
+/* Minus Margin Bottom */
+
+/* Minus Margin Left */
+
+
+
+/* Minus Margin Right */
+/* Margin Left and Right */
+
+
+/* Custon Spaces
+------------------------------------*/
+/* Margin Top */
+
+
+/* Margin Bottom */
+
+/* Margin Left */
+
+.g-ml-20 {
+    margin-left: 1.42857rem; }
+.g-ml-40 {
+    margin-left: 2.85714rem !important; }
+
+
+/* Margin Right */
+
+/* Margin Left and Right */
+
+/* Margin Top and Bottom */
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/*------------------------------------
+  Margins Extended
+------------------------------------*/
+@media (min-width: 992px) {
+    /* Margin Top */
+}
+
+/*------------------------------------
+  Padding Spaces
+------------------------------------*/
+/* Padding Spaces (xs)
+------------------------------------*/
+@media (min-width: 0) { }
+    .g-pt-0 {
+        padding-top: 0 !important; }
+
+    .g-pa-0 {
+        padding: 0 !important;
+    }
+
+    .g-pr-0 {
+        padding-right: 0 !important;
+    }
+
+    /* Padding Around */
+    .g-pa-30 {
+        padding: 2.14286rem !important;
+    }
+
+    .g-pa-35 {
+        padding: 2.5rem !important;
+    }
+
+    /* Padding X */
+    .g-px-5 {
+        padding-left: 0.35714rem !important;
+        padding-right: 0.35714rem !important;
+    }
+
+    .g-px-14 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .g-px-15 {
+        padding-left: 1.07143rem !important;
+        padding-right: 1.07143rem !important;
+    }
+
+    .g-px-15 {
+        padding-left: 1.07143rem !important;
+        padding-right: 1.07143rem !important;
+    }
+
+    .g-px-20 {
+        padding-left: 1.42857rem !important;
+        padding-right: 1.42857rem !important;
+    }
+
+    .g-px-25 {
+        padding-left: 1.78571rem !important;
+        padding-right: 1.78571rem !important;
+    }
+
+    /* Padding Y */
+    .g-py-8 {
+        padding-top: 0.57143rem !important;
+        padding-bottom: 0.57143rem !important;
+    }
+
+    .g-py-10 {
+        padding-top: 0.71429rem !important;
+        padding-bottom: 0.71429rem !important;
+    }
+
+    .g-py-13 {
+        padding-top: 0.92857rem !important;
+        padding-bottom: 0.92857rem !important;
+    }
+
+    /* P */
+    .g-py-10 {
+        padding-top: 0.71429rem !important;
+        padding-bottom: 0.71429rem !important;
+    }
+
+    /* P */
+    /* P */
+    .g-py-20 {
+        padding-top: 1.42857rem !important;
+        padding-bottom: 1.42857rem !important;
+    }
+
+    /* P */
+    /* P */
+    .g-py-30 {
+        padding-top: 2.14286rem !important;
+        padding-bottom: 2.14286rem !important;
+    }
+
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* Padding Top */
+    .g-pt-5 {
+        padding-top: 0.35714rem !important;
+    }
+
+    .g-pt-10 {
+        padding-top: 0.71429rem !important;
+    }
+
+    .g-pt-30 {
+        padding-top: 2.14286rem !important;
+    }
+
+    .g-pt-100 {
+        padding-top: 7.14286rem !important; }
+
+    .g-pt-150 {
+        padding-top: 10.71429rem !important;
+    }
+
+    /* Padding Right */
+    .g-pr-0 {
+        padding-right: 0px !important;
+    }
+
+    /* P */
+    /* P */
+    /* P */
+    /* Padding Bottom */
+    .g-pb-20 {
+        padding-bottom: 1.42857rem !important;
+    }
+
+    .g-pb-30 {
+        padding-bottom: 2.14286rem !important;
+    }
+
+    /* Padding Left */
+    /* P */
+    /* P */
+    .g-pl-15 {
+        padding-left: 1.07143rem !important;
+    }
+
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+
+/* Padding Spaces (sm)
+------------------------------------*/
+@media (min-width: 576px) {
+    /* Padding Around */
+    /* Padding X */
+    /* Padding Y */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* Padding Top */
+    /* Padding Right */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* Padding Bottom */
+    /* Padding Left */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+}
+
+/* Padding Spaces (md)
+------------------------------------*/
+/* P */
+@media (min-width: 768px) {
+    /* Padding Around */
+    /* Padding X */
+    /* Padding Y */
+    /* P */
+    /* P */
+
+    /* P */
+    /* P */
+    /* P */
+    /* Padding Top */
+    /* Padding Right */
+    /* P */
+
+    /* P */
+    /* P */
+    /* Padding Bottom */
+    /* Padding Left */
+    /* P */
+    /* P */
+
+    /* P */
+    /* P */
+    /* P */
+}
+
+/* Padding Spaces (lg) P
+------------------------------------*/
+/* P */
+@media (min-width: 992px) {
+    .g-pb-0--lg {
+        padding-bottom: 0 !important; }
+    /* Padding Around */
+    /* Padding X */
+    /* Padding Y */
+    /* P */
+
+    /* P */
+    /* P */
+    /* P */
+    /* Padding Top */
+    /* Padding Right */
+    /* P */
+    /* P */
+
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* Padding Bottom */
+    .g-pb-0--lg {
+        padding-bottom: 0px !important; }
+    /* Padding Left */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+}
+
+/* Padding Spaces (xl) P
+------------------------------------*/
+@media (min-width: 1200px) {
+    /* Padding Around */
+    /* Padding X */
+    /* Padding Y */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* Padding Top */
+    /* Padding Right */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* Padding Bottom */
+    /* Padding Left */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+    /* P */
+}
+
+/* Custom Paddings (xs)
+------------------------------------*/
+
+
+
+
+.g-pl-7--hover:hover {
+    padding-left: 0.5rem !important; }
+
+
+.g-pt-150 {
+    padding-top: 10.71429rem !important; }
+
+
+/* Custom Paddings (sm)
+------------------------------------*/
+@media (min-width: 576px) {
+}
+
+/* Custom Paddings (md)
+------------------------------------*/
+@media (min-width: 768px) {
+}
+
+/* Custom Paddings (lg)
+------------------------------------*/
+@media (min-width: 992px) {
+}
+
+/* Custom Paddings (xl)
+------------------------------------*/
+@media (min-width: 1200px) {
+}
+
+/*------------------------------------
+  Block Hidden
+------------------------------------*/
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 991px) {
+    .g-hidden-md-down {
+        display: none !important; } }
+
+@media (min-width: 992px) {
+}
+
+@media (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+
+body {    background-color: #fff; }
+
+p {
+    color: #6f7274; }
+
+/*------------------------------------
+  Colors
+------------------------------------*/
+.g-color-text {
+    color: #6f7274; }
+
+.g-color-main {
+    color: #052c52; }
+
+.g-color-main-opacity-0_5 {
+    color: rgba(5, 44, 82, 0.5); }
+
+
+.g-color-dark-light-v1 {
+    color: #0e151b; }
+
+/*------------------------------------
+  Background Colors
+------------------------------------*/
+.g-bg-main {
+    background-color: #052c52 !important; }
+
+.g-bg-main2 {
+    background-color: #477549 !important; }
+
+.g-bg-main--hover:hover {
+    background-color: #052c52 !important; }
+
+.g-bg-main--focus:focus {
+    background-color: #052c52 !important; }
+
+/*------------------------------------
+  Border Colors
+------------------------------------*/
+
+/*--------------------------------------------------
+  Info Block v10-1
+----------------------------------------------------*/
+
+/*------------------------------------
+  Dropdown Toggle
+------------------------------------*/
+
+/*------------------------------------
+  Box-shadows-v29
+------------------------------------*/
+.u-shadow-v29--hover:hover {
+    box-shadow: 0 15px 50px 0 rgba(5, 44, 82, 0.2); }
+
+/*------------------------------------
+  Carousel indicators v33
+------------------------------------*/
+
+/*------------------------------------
+  Container Fixed to Footer
+------------------------------------*/

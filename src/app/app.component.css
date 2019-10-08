@@ -1,0 +1,17 @@
+
+.root{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main{
+    flex-grow: 1;
+    background-color: rgb(249, 249, 249);
+    /* padding-top: 10px; */
+    /* padding-bottom: 50px; */
+}
+
+.hidden{
+    display: none;
+}
