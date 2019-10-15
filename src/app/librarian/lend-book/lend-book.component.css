@@ -1,0 +1,7 @@
+.libraryUser {
+    cursor: pointer;
+}
+
+.libraryUser:hover {
+    background-color: #ecaa20;
+}

@@ -78,7 +78,8 @@ export class LibrarianComponent implements OnInit {
   }
 
   public deleteBook() {
-    this.librarianService.deleteBook(this.book.id).subscribe(() => {
+    this.librarianService.deleteBook(this.book.id).subscribe((val: any) => {
+      console.log('delete payload', val);
       this.toastrService.success('Deleted successfully!!', 'Success');
       this.onPageChanged({page: 1, itemsPerPage: this.itemsPerPage});
     }, (err: any) => {

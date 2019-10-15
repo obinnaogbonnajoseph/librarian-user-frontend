@@ -5,6 +5,7 @@ import { BsModalRef } from 'ngx-bootstrap';
 import { LibrarianService } from '../librarian.service';
 import { BookUserService } from 'src/app/services/book-user.service';
 import { ToastrService } from 'ngx-toastr';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-lend-book',
@@ -66,10 +67,14 @@ export class LendBookComponent implements OnInit {
     this.page = event.page;
     const offset = (event.page - 1) * event.itemsPerPage;
     this._offset = offset;
-    const filter = Object.assign({}, this.form.value);
+    const filterParam = Object.assign({}, this.form.value);
 
-    this.queryResult$ = this.bookUserService.searchUsers(filter, this.itemsPerPage, this.offset);
-    this.working = false;
+    this.queryResult$ = this.bookUserService.searchUsers(filterParam, this.itemsPerPage, this.offset)
+      .pipe(filter(val => this.isLibraryUser(val)));
+    // making the working boolean wait a second before being false;
+    setTimeout(() => {
+      this.working = false;
+    }, 1200);
   }
 
   onSelectUser(user: any) {
@@ -100,6 +105,12 @@ export class LendBookComponent implements OnInit {
       page: 1,
       itemsPerPage: this.itemsPerPage
     });
+  }
+
+  isLibraryUser(user: any) {
+    const userRoles: string[] = user.roles;
+    const libraryUserRoles = ['BORROW_BOOKS'];
+    return userRoles.some((it: string) => libraryUserRoles.indexOf(it) > 0);
   }
 
 }
