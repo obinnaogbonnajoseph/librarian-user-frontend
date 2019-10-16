@@ -14,13 +14,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { UserComponent } from './user/user.component';
 import { ProgressbarModule, PaginationModule, BsDropdownModule } from 'ngx-bootstrap';
+import { SignupPageComponent } from './signup-page/signup-page.component';
+import { ReactiveValidationModule } from 'angular-reactive-validation';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    UserComponent
+    UserComponent,
+    SignupPageComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +39,8 @@ import { ProgressbarModule, PaginationModule, BsDropdownModule } from 'ngx-boots
     ReactiveFormsModule,
     PaginationModule.forRoot(),
     FormsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    ReactiveValidationModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}

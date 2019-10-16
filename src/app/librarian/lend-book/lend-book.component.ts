@@ -5,7 +5,7 @@ import { BsModalRef } from 'ngx-bootstrap';
 import { LibrarianService } from '../librarian.service';
 import { BookUserService } from 'src/app/services/book-user.service';
 import { ToastrService } from 'ngx-toastr';
-import { filter } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-lend-book',
@@ -25,6 +25,8 @@ export class LendBookComponent implements OnInit {
   private _offset = 0;
   selectedUser: any;
   book: any;
+  // tslint:disable-next-line: variable-name
+  _count: number;
 
   constructor(private fb: FormBuilder,
               public modalRef: BsModalRef,
@@ -70,11 +72,16 @@ export class LendBookComponent implements OnInit {
     const filterParam = Object.assign({}, this.form.value);
 
     this.queryResult$ = this.bookUserService.searchUsers(filterParam, this.itemsPerPage, this.offset)
-      .pipe(filter(val => this.isLibraryUser(val)));
-    // making the working boolean wait a second before being false;
-    setTimeout(() => {
-      this.working = false;
-    }, 1200);
+      .pipe(map((queryResult: any) => {
+        const results: any[] = queryResult.results;
+        let filteredResults: any[] = [];
+        if (results) {
+          filteredResults = results.filter(it => this.isLibraryUser(it));
+        }
+        queryResult.results = filteredResults;
+        this.working = false;
+        return queryResult;
+      }));
   }
 
   onSelectUser(user: any) {
@@ -108,9 +115,13 @@ export class LendBookComponent implements OnInit {
   }
 
   isLibraryUser(user: any) {
-    const userRoles: string[] = user.roles;
-    const libraryUserRoles = ['BORROW_BOOKS'];
-    return userRoles.some((it: string) => libraryUserRoles.indexOf(it) > 0);
+    if (user) {
+      const currentUser = Object.assign({}, user);
+      const userRoles: string[] = currentUser.roles;
+      const libraryUserRoles = ['BORROW_BOOKS'];
+      return userRoles.some((it: string) => libraryUserRoles.indexOf(it) >= 0 );
+    }
+    return false;
   }
 
 }

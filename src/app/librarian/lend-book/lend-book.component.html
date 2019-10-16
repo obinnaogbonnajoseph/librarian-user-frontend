@@ -25,11 +25,11 @@
     <loader></loader>
 </ng-template>
 
-<div class="page container">
+<div class="page container" *ngIf='book; else loader'>
     <div class="card">
         <div class="card-body p-10">
             <div class="modal-header">
-                <h4 class="modal-title pull-left">Lend Book</h4>
+                <h4 class="modal-title pull-left">Lend <span class="book-title">{{book.name | uppercase}}</span></h4>
                 <button type="button" class="close pull-right" aria-label="close" (click)="modalRef.hide()">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -59,7 +59,7 @@
                     <div class="clearfix"></div>
                 </form>
             </div>
-            <div *ngIf="queryResult$ | async as list">
+            <div *ngIf="queryResult$ | async | resultList as list">
                 <div *ngIf="list && list.length > 0 && !working">
                     <div style="display: inline-block !important;">Show</div>
                     <div class="form-group mr-3 ml-2" style="display: inline-block !important;">
@@ -74,10 +74,9 @@
             <div class="clearfix"></div>
             <div class="table-responsive-md">
                 <table class="table table-sm table-bordered
-          table-striped" *ngIf="queryResult$ | async as list">
+                  table-striped" *ngIf="queryResult$ | async | resultList as list">
                     <thead>
                         <tr>
-                            <!-- <th scope="col"></th> -->
                             <th scope="col">#</th>
                             <th scope="col">Username</th>
                             <th scope="col">First Name</th>
@@ -97,7 +96,7 @@
                             <td>{{(row.username | uppercase) || 'N/A'}}</td>
                             <td>{{(row.firstName | uppercase) || 'N/A'}}</td>
                             <td>{{(row.lastName | uppercase) || 'N/A'}}</td>
-                            <td>{{row.userId || 'N/A'}}</td>
+                            <td>{{row.id || 'N/A'}}</td>
                         </tr>
                     </tbody>
                     <tbody *ngIf="!list.length && !working">

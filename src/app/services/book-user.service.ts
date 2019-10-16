@@ -22,7 +22,7 @@ export class BookUserService {
       }
       params[it] = filter[it];
     });
-    return this.httpClient.get<any>(this.userUrl, {
+    return this.httpClient.get<any[]>(this.userUrl, {
       params
     });
   }

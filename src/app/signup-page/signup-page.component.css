@@ -1,0 +1,92 @@
+.page{
+  background-color: #f9f9f9;
+  padding: 24px 0;
+}
+
+.wrapper {
+  max-width: 600px;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto;
+}
+
+.root{
+  padding-top: 48px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.forgot-password-link{
+  display: block;
+  text-align: right;
+}
+
+.alt{
+  text-align: center;
+}
+
+.ui.header{
+  display: block;
+  color: #00AD56;
+}
+
+.btn:hover{
+  background-color: #0093dd;
+}
+
+
+
+/* New Model Styling */
+
+.info-box-canvas{
+  padding-left: 30px;
+  border-left: 1px solid #ccc;
+}
+
+@media (max-width: 767px) {
+  .info-box-canvas{
+      padding-left: 0px;
+      border-left: 1px solid transparent;
+  }
+}
+
+
+  ol, ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+  }
+
+  ol li {
+      display: block;
+      line-height: 20px !important;
+      padding: 5px 0px 5px 0px;
+      border-bottom: 1px dashed #ccc;
+      color: #6f7274;
+  }
+
+  ol li ol li {
+      margin-left: 10px;
+      display: block;
+      border-bottom: none;
+      color: #6f7274;
+  }
+
+.rounded {
+  border-radius: .25rem!important;
+  border: 1px solid #e8e5e5;
+  margin-bottom: 5px;
+}
+
+.g-brd-primary {
+  border-bottom: 1px solid #b8e4cb!important
+}
+
+.flex-ml-auto .fa {
+  color: #2dc565;
+}
+/* New Model Styling//// END */
+
+.invalid-feedback {
+  color: red;
+}

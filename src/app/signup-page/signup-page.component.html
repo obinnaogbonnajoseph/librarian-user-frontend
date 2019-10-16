@@ -1,0 +1,78 @@
+<ng-template #loader>
+    <loader></loader>
+  </ng-template>
+
+  <div class="page">
+    <div class="container">
+      <div class="row mt-5">
+
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4 text-center">
+          <div class="g-bg-white rounded g-pa-50 card">
+            <header class="text-center mb-4">
+              <h2 class="h2 g-color-black g-font-weight-600">
+                Sign Up
+              </h2>
+            </header>
+
+            <!-- Form-->
+            <form [formGroup]="form" class="g-py-15" (submit)="submit()">
+
+              <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="error">
+                {{error}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="error=null">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="row">
+                <div class="form-group acol-md-4">
+                  <input class="form-control" type="text" placeholder="username" name="username" formControlName="username">
+                  <arv-validation-messages for="username"></arv-validation-messages>
+                </div>
+
+                <div class="form-group col-md-4">
+                  <input class="form-control" type="text" placeholder="firstname" name="firstname" formControlName="firstname">
+                  <arv-validation-messages for="firstname"></arv-validation-messages>
+                </div>
+
+                <div class="form-group col-md-4">
+                  <input class="form-control" type="text" placeholder="lastname" name="lastname" formControlName="lastname">
+                  <arv-validation-messages for="lastname"></arv-validation-messages>
+                </div>
+
+                <div class="form-group col-md-4">
+                  <input class="form-control" type="text" placeholder="password" name="password" formControlName="password">
+                  <arv-validation-messages for="password"></arv-validation-messages>
+                </div>
+
+                <div class="form-group col-md-4">
+                  <input class="form-control" type="text" placeholder="confirm password" name="confirmPassword" formControlName="confirm-password">
+                  <arv-validation-messages for="confirmPassword"></arv-validation-messages>
+                </div>
+
+                <div class="form-group form-check col-md-4">
+                    <input type="checkbox" formControlName="librarianUser" id="librarianUser" class="form-check-input" />
+                    <label for="librarianUser" class="form-check-label">Is Librarian?</label>
+                    <arv-validation-messages for="librarianUser"></arv-validation-messages>
+                </div>
+
+              </div>
+
+              <div class="text-center mb-5">
+                <button class="btn btn-block btn-primary" type="submit" [class.disabled]="form.invalid">
+                  <i class="fa fa-spinner fa-pulse" *ngIf="loading"></i>&nbsp;Login
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        <div class="col-md-4"></div>
+
+      </div>
+    </div>
+  </div>

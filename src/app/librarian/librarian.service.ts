@@ -22,7 +22,7 @@ export class LibrarianService {
         params[it] = filter[it];
       });
     }
-    return this.httpClient.get<any>(this.queryUrl, {
+    return this.httpClient.get<any[]>(this.queryUrl, {
       params
     });
   }
