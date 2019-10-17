@@ -15,8 +15,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { UserComponent } from './user/user.component';
 import { ProgressbarModule, PaginationModule, BsDropdownModule } from 'ngx-bootstrap';
 import { SignupPageComponent } from './signup-page/signup-page.component';
-import { ReactiveValidationModule } from 'angular-reactive-validation';
-
+import { NgBootstrapFormValidationModule, CUSTOM_ERROR_MESSAGES } from 'ng-bootstrap-form-validation';
+import { CUSTOM_ERRORS } from '@utils/custom-errors';
 
 @NgModule({
   declarations: [
@@ -40,14 +40,14 @@ import { ReactiveValidationModule } from 'angular-reactive-validation';
     PaginationModule.forRoot(),
     FormsModule,
     BsDropdownModule.forRoot(),
-    ReactiveValidationModule.forRoot({
-      displayValidationMessageWhen: (control, formSubmitted) => {
-        return true;
-      }
-    })
+    NgBootstrapFormValidationModule.forRoot(),
+    NgBootstrapFormValidationModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true},
+    {provide: CUSTOM_ERROR_MESSAGES,
+    useValue: CUSTOM_ERRORS,
+    multi: true}
   ],
   bootstrap: [AppComponent]
 })

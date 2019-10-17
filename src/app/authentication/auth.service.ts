@@ -55,6 +55,10 @@ export class AuthService {
 
     }
 
+    public signup(data: any): Observable<any> {
+      return this.httpClient.post(`${environment.baseApi}/auth/signup`, data);
+    }
+
     public newToken() {
       return AuthService.newUserToken;
     }
