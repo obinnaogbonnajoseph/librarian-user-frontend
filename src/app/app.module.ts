@@ -40,7 +40,11 @@ import { ReactiveValidationModule } from 'angular-reactive-validation';
     PaginationModule.forRoot(),
     FormsModule,
     BsDropdownModule.forRoot(),
-    ReactiveValidationModule
+    ReactiveValidationModule.forRoot({
+      displayValidationMessageWhen: (control, formSubmitted) => {
+        return true;
+      }
+    })
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}

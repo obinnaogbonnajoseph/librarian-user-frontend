@@ -47,7 +47,6 @@ export class AuthService {
     public login(data: any): Observable<any> {
       return this.httpClient.post(`${environment.baseApi}/auth/login`, data)
       .pipe(map((payload: any) => {
-        console.log('login payload...', payload);
         AuthService.initialized = false;
         AuthService.ongoingFetch = null;
         AuthService.newUserToken.next(payload.token);
