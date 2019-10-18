@@ -1,6 +1,6 @@
 {
     "/api/v1/*": {
-        "target": "http://192.168.8.100:9234",
+        "target": "http://localhost:9234",
         "secure": false,
         "logLevel": "debug"
     }

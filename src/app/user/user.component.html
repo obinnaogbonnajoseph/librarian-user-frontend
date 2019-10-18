@@ -42,7 +42,7 @@
             <div class="clearfix"></div>
           </form>
         </div>
-        <div *ngIf="queryResult$ | async as list">
+        <div *ngIf="queryResult$ | async | resultList as list">
           <div *ngIf="list && list.length > 0 && !working">
             <div style="display: inline-block !important;">Show</div>
             <div class="form-group mr-3 ml-2" style="display: inline-block !important;">
@@ -57,7 +57,7 @@
         <div class="clearfix"></div>
         <div class="table-responsive-md">
           <table class="table table-sm table-bordered
-            table-striped" *ngIf="queryResult$ | async as list; else loading">
+            table-striped" *ngIf="queryResult$ | async | resultList as list; else loading">
             <thead>
               <tr>
                 <th scope="col">#</th>

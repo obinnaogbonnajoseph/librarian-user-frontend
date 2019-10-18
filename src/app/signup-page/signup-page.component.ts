@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, AbstractControl, ValidationErrors, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, AbstractControl, Validators } from '@angular/forms';
 import { User } from '@models/user.model';
 import { Router } from '@angular/router';
 import { AuthService } from '@authentication/auth.service';
@@ -26,15 +26,21 @@ export class SignupPageComponent implements OnInit {
 
       this.form = fb.group({
         username: ['', Validators.required],
-        firstname: ['', Validators.required],
-        lastname: ['', Validators.required],
+        firstName: ['', Validators.required],
+        lastName: ['', Validators.required],
         password: ['', Validators.required],
-        confirmPassword: ['', Validators.compose([Validators.required, this.passwordMatch])],
+        confirmPassword: ['', Validators.compose([Validators.required, this.passwordMatch()])],
         librarianUser: [false]
       });
+
+      const password = this.form.get('password');
+      password.valueChanges.subscribe(() => {
+      this.form.get('confirmPassword').updateValueAndValidity();
+    });
     }
 
   ngOnInit() {
+
   }
 
   public submit(): void {
@@ -71,14 +77,18 @@ export class SignupPageComponent implements OnInit {
       });
   }
 
-  public passwordMatch(control: AbstractControl): { [key: string]: boolean } | null {
-    const password = this.form.get('password').value.trim();
+  public passwordMatch() {
 
-    if (password !== null) {
-      return password === control.value.trim() ? null : { passwordMatch: true};
+    return (control: AbstractControl) => {
+      if (!this.form) {
+        return null;
+      }
+      const password = this.form.get('password').value;
+      if (password !== null) {
+        return password.trim() === control.value ? null : { passwordMatch: true};
+      }
+      return null;
     }
-
-    return null;
   }
 
 }
