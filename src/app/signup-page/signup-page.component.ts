@@ -4,16 +4,19 @@ import { User } from '@models/user.model';
 import { Router } from '@angular/router';
 import { AuthService } from '@authentication/auth.service';
 import { ToastrService } from 'ngx-toastr';
+import { FormCanDeactivate } from '@utils/can-deactivate/form-can-deactivate';
 
 @Component({
   selector: 'app-signup-page',
   templateUrl: './signup-page.component.html',
   styleUrls: ['./signup-page.component.css']
 })
-export class SignupPageComponent implements OnInit {
+export class SignupPageComponent extends FormCanDeactivate implements OnInit {
 
   public form: FormGroup;
   public loading: boolean;
+  // tslint:disable-next-line: variable-name
+  private _isSubmitSuccessful = false;
 
   public user: User;
   public error!: string | null;
@@ -22,9 +25,10 @@ export class SignupPageComponent implements OnInit {
               fb: FormBuilder,
               private authService: AuthService,
               private toastrService: ToastrService) {
-      this.loading = false;
+    super();
+    this.loading = false;
 
-      this.form = fb.group({
+    this.form = fb.group({
         username: ['', Validators.required],
         firstName: ['', Validators.required],
         lastName: ['', Validators.required],
@@ -33,8 +37,8 @@ export class SignupPageComponent implements OnInit {
         librarianUser: [false]
       });
 
-      const password = this.form.get('password');
-      password.valueChanges.subscribe(() => {
+    const password = this.form.get('password');
+    password.valueChanges.subscribe(() => {
       this.form.get('confirmPassword').updateValueAndValidity();
     });
     }
@@ -63,6 +67,7 @@ export class SignupPageComponent implements OnInit {
     console.log('data sent to backend to create user::::', data);
 
     this.authService.signup(data).subscribe(() => {
+      this._isSubmitSuccessful = true;
       this.toastrService.success('User successfully created', 'Success!!', { closeButton: true});
       this.router.navigate(['/login']);
       this.loading = false;
@@ -88,7 +93,11 @@ export class SignupPageComponent implements OnInit {
         return password.trim() === control.value ? null : { passwordMatch: true};
       }
       return null;
-    }
+    };
+  }
+
+  public get isSubmitSuccessful() {
+    return this._isSubmitSuccessful;
   }
 
 }
