@@ -9,12 +9,12 @@ import { isUndefined } from 'util';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+
   loading: boolean;
   public user: any = undefined;
 
   constructor(private router: Router,
-      private authService: AuthService) {
+              private authService: AuthService) {
       // authenticate the user;
       this.authService.init();
       this.authService.getUser().subscribe((user) => {
@@ -22,11 +22,11 @@ export class AppComponent {
       });
 
       this.router.events.subscribe((event: any) => {
-        if (event instanceof RouteConfigLoadStart || 
+        if (event instanceof RouteConfigLoadStart ||
           event instanceof NavigationStart) {
           this.loading = true;
-        } else if (event instanceof NavigationEnd || 
-          event instanceof NavigationCancel || 
+        } else if (event instanceof NavigationEnd ||
+          event instanceof NavigationCancel ||
           event instanceof NavigationError) {
             this.loading = false;
         }

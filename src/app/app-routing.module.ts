@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ActiveUserGuard } from '@authentication/active-user.guard';
 import { UserComponent } from './user/user.component';
+import { SignupPageComponent } from './signup-page/signup-page.component';
+import { CanDeactivateGuard } from '@utils/can-deactivate/can-deactivate.guard';
 
 
 const routes: Routes = [
@@ -15,6 +17,12 @@ const routes: Routes = [
     path: 'login',
     component: LoginPageComponent,
     pathMatch: 'full'
+  },
+  {
+    path: 'signup',
+    component: SignupPageComponent,
+    pathMatch: 'full',
+    canDeactivate: [CanDeactivateGuard]
   },
   {
     path: 'librarian',

@@ -1,0 +1,71 @@
+<ng-template #loader>
+    <loader></loader>
+</ng-template>
+
+<div class="page">
+    <div class="container">
+        <div class="row mt-5">
+
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4 text-center">
+                <div class="g-bg-white rounded g-pa-50 card">
+                    <header class="text-center mb-4">
+                        <h2 class="h2 g-color-black g-font-weight-600">
+                            Sign Up
+                        </h2>
+                    </header>
+
+                    <!-- Form-->
+                    <form [formGroup]="form" class="g-py-15" (validSubmit)="submit()">
+
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="error">
+                            {{error}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="error=null">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="text" placeholder="Username" name="username" formControlName="username">
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="text" placeholder="First Name" name="firstName" formControlName="firstName">
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="text" placeholder="Last Name" name="lastName" formControlName="lastName">
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="password" placeholder="Password" name="password" formControlName="password">
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="password" placeholder="Confirm Password" name="confirmPassword" formControlName="confirmPassword">
+                            <bfv-messages></bfv-messages>
+                        </div>
+
+                        <div class="form-group form-check mb-4">
+                            <input type="checkbox" formControlName="librarianUser" id="librarianUser" class="form-check-input" />
+                            <label for="librarianUser" class="form-check-label">Is Librarian?</label>
+                        </div>
+
+                        <div class="text-center mb-5">
+                            <button class="btn btn-primary mr-3" type="submit" [class.disabled]="form.invalid">
+                              <i class="fa fa-spinner fa-pulse" *ngIf="loading"></i>&nbsp;Sign up
+                            </button>
+                            <a href="#" class="btn btn-link" [routerLink]="'/login'">Login</a>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-md-4"></div>
+
+        </div>
+    </div>
+</div>

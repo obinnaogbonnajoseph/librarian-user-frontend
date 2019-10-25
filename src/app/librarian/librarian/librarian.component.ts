@@ -7,6 +7,8 @@ import { AddUpdateBookComponent } from '../add-update-book/add-update-book.compo
 import { ToastrService } from 'ngx-toastr';
 import { LendBookComponent } from '../lend-book/lend-book.component';
 import { PageChangedEvent } from 'ngx-bootstrap';
+import { HttpErrorResponse } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -29,6 +31,8 @@ export class LibrarianComponent implements OnInit {
   subscriptions: Subscription[] = [];
   // tslint:disable-next-line: variable-name
   _list: any;
+    // tslint:disable-next-line: variable-name
+  _count: number;
 
   constructor(private modalService: BsModalService,
               private librarianService: LibrarianService,
@@ -37,6 +41,10 @@ export class LibrarianComponent implements OnInit {
               private authService: AuthService) {
       this.user$ = this.authService.getUser();
       this.queryResult$ = this.librarianService.fetchBooks(this.itemsPerPage, this.offset);
+      const queryCount$ = this.queryResult$.pipe(map((val: any) => val.total));
+      queryCount$.subscribe(val => {
+        this._count = val;
+      });
     }
 
   ngOnInit() {}
@@ -48,7 +56,11 @@ export class LibrarianComponent implements OnInit {
 
     // get the query results...
     this.queryResult$ = this.librarianService.fetchBooks(event.itemsPerPage, offset);
-    this.working = false;
+    const queryCount$ = this.queryResult$.pipe(map((val: any) => val.total));
+    queryCount$.subscribe(val => {
+      this._count = val;
+      this.working = false;
+    });
   }
 
   onItemsPerPageChange() {
@@ -78,10 +90,11 @@ export class LibrarianComponent implements OnInit {
   }
 
   public deleteBook() {
-    this.librarianService.deleteBook(this.book.id).subscribe(() => {
+    this.librarianService.deleteBook(this.book.id).subscribe((val: any) => {
+      console.log('delete payload', val);
       this.toastrService.success('Deleted successfully!!', 'Success');
       this.onPageChanged({page: 1, itemsPerPage: this.itemsPerPage});
-    }, (err: any) => {
+    }, (err: HttpErrorResponse) => {
       this.toastrService.error('Delete failed!!', 'Failed');
       console.error('Delete error: ', err);
     });
@@ -151,7 +164,7 @@ export class LibrarianComponent implements OnInit {
   }
 
   get totalCount() {
-    return 5;
+    return this._count;
   }
 
 }

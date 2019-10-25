@@ -27,7 +27,7 @@
                     href="" (click)="addBook(); false"><i class="fa fa-plus"></i>&nbsp;Add Book</a></span></h3>
             </div>
 
-            <div *ngIf="queryResult$ | async as list">
+            <div *ngIf="queryResult$ | async | resultList as list">
                 <div *ngIf="list.length && !working">
                     <div style="display: inline-block !important;">
                         Show
@@ -44,7 +44,7 @@
             <div class="clearfix"></div>
 
             <div class="table-responsive-md">
-                <table class="table table-sm table-bordered table-striped" *ngIf="queryResult$ | async as list; else loading">
+                <table class="table table-sm table-bordered table-striped" *ngIf="queryResult$ | async | resultList as list; else loading">
                     <thead>
                         <tr>
                             <th scope="col">#</th>

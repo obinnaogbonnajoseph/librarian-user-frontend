@@ -5,6 +5,7 @@ import { AuthService } from '@authentication/auth.service';
 import { LibrarianService } from '../librarian/librarian.service';
 import { PageChangedEvent } from 'ngx-bootstrap';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-user',
@@ -13,8 +14,8 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class UserComponent implements OnInit {
 
-  itemsPerPage = 1;
-  countPerPage = [1, 2, 5, 10];
+  itemsPerPage = 10;
+  countPerPage = [10, 20, 50, 100];
   currentPage = 1;
   working: boolean;
   queryResult$: Observable<any>;
@@ -22,6 +23,8 @@ export class UserComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   private _offset = 0;
   form: FormGroup;
+  // tslint:disable-next-line: variable-name
+  private _count: number;
 
 
   constructor(private toastrService: ToastrService,
@@ -30,7 +33,9 @@ export class UserComponent implements OnInit {
               private librarianService: LibrarianService) {
                 this.user$ = this.authService.getUser();
                 this.queryResult$ = this.librarianService.fetchBooks(this.itemsPerPage, this.offset);
-               }
+                const totalCount$ = this.queryResult$.pipe(map((val: any) => val.total));
+                totalCount$.subscribe((val: number) => this._count = val);
+  }
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -43,9 +48,12 @@ export class UserComponent implements OnInit {
     this.working = true;
     const offset = ( event.page - 1) * event.itemsPerPage;
     this._offset = offset;
+    const filter = this.form.value;
 
     // get the query results...
-    this.queryResult$ = this.librarianService.fetchBooks(event.itemsPerPage, offset);
+    this.queryResult$ = this.librarianService.fetchBooks(event.itemsPerPage, offset, filter);
+    const totalCount$ = this.queryResult$.pipe(map((val: any) => val.total));
+    totalCount$.subscribe((val: number) => this._count = val);
     this.working = false;
   }
 
@@ -91,7 +99,7 @@ export class UserComponent implements OnInit {
   }
 
   get totalCount() {
-    return 5;
+    return this._count;
   }
 
   submit() {

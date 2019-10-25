@@ -8,13 +8,21 @@ import { environment } from '@environment/environment';
 })
 export class LibrarianService {
 
-  private queryUrl = `${environment.queryResultBaseUrl}`;
+  private queryUrl = `${environment.baseApi}/librarian`;
 
   constructor(private httpClient: HttpClient) { }
 
-  public fetchBooks(limit: number, offset: number) {
-    const params: any = { _start: offset.toString(), _limit: limit.toString() };
-    return this.httpClient.get<any>(this.queryUrl, {
+  public fetchBooks(limit: number, offset: number, filter?: any) {
+    const params: any = { page: offset, limit };
+    if (filter) {
+      Object.keys(filter).forEach(it => {
+        if (!filter[it]) {
+          return;
+        }
+        params[it] = filter[it];
+      });
+    }
+    return this.httpClient.get<any[]>(this.queryUrl, {
       params
     });
   }

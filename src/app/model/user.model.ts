@@ -18,6 +18,6 @@ export class User {
 
     public isLibrarian(): boolean {
         const librarianRoles = ['MODIFY_BOOKS', 'CREATE_BOOKS'];
-        return this.roles.some((it: string) => librarianRoles.indexOf(it) > 0);
+        return this.roles.some((it: string) => librarianRoles.indexOf(it) >= 0);
     }
 }

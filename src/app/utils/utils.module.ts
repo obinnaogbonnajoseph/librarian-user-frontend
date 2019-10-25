@@ -5,11 +5,12 @@ import { SiteHeaderComponent } from './site-header/site-header.component';
 import { SiteToolbarComponent } from './site-toolbar/site-toolbar.component';
 import { RouterModule } from '@angular/router';
 import { SiteFooterComponent } from './site-footer/site-footer.component';
+import { ResultListPipe } from './result-list.pipe';
 
 
 
 @NgModule({
-  declarations: [LoaderComponent, SiteHeaderComponent, SiteToolbarComponent, SiteFooterComponent],
+  declarations: [LoaderComponent, SiteHeaderComponent, SiteToolbarComponent, SiteFooterComponent, ResultListPipe],
   imports: [
     CommonModule,
     RouterModule
@@ -17,7 +18,8 @@ import { SiteFooterComponent } from './site-footer/site-footer.component';
   exports: [
     LoaderComponent,
     SiteHeaderComponent,
-    SiteFooterComponent
+    SiteFooterComponent,
+    ResultListPipe
   ]
 })
 export class UtilsModule { }

@@ -14,13 +14,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { UserComponent } from './user/user.component';
 import { ProgressbarModule, PaginationModule, BsDropdownModule } from 'ngx-bootstrap';
-
+import { SignupPageComponent } from './signup-page/signup-page.component';
+import { NgBootstrapFormValidationModule, CUSTOM_ERROR_MESSAGES } from 'ng-bootstrap-form-validation';
+import { CUSTOM_ERRORS } from '@utils/custom-errors';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    UserComponent
+    UserComponent,
+    SignupPageComponent
   ],
   imports: [
     CommonModule,
@@ -36,10 +39,15 @@ import { ProgressbarModule, PaginationModule, BsDropdownModule } from 'ngx-boots
     ReactiveFormsModule,
     PaginationModule.forRoot(),
     FormsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    NgBootstrapFormValidationModule.forRoot(),
+    NgBootstrapFormValidationModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true},
+    {provide: CUSTOM_ERROR_MESSAGES,
+    useValue: CUSTOM_ERRORS,
+    multi: true}
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,14 @@
+.libraryUser {
+    cursor: pointer;
+}
+
+.libraryUser:hover {
+    background-color: #ecaa20;
+}
+
+.book-title {
+  color: rgb(241, 95, 95);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+}

@@ -14,7 +14,6 @@ import { LendBookComponent } from './lend-book/lend-book.component';
 import { ToastrModule } from 'ngx-toastr';
 
 
-
 const routes: Routes = [
   {
     path: '', component: LibrarianComponent,
