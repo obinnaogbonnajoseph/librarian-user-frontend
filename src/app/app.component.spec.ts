@@ -1,16 +1,22 @@
-import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture, fakeAsync, flush } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { UtilsModule } from '@utils/utils.module';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { AuthService } from '@authentication/auth.service';
-import { BehaviorSubject, Subject, of } from 'rxjs';
+import { BehaviorSubject, Subject, of, Observable } from 'rxjs';
 import { User } from '@models/user.model';
+import { Router, RouteConfigLoadStart, NavigationStart } from '@angular/router';
+
+export class MockRouter {
+  events: Observable<Event>;
+}
 
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let mockAuthService;
+  let mockRouter: MockRouter;
 
   // set up mockUser
   let userData = {
@@ -28,6 +34,8 @@ describe('AppComponent', () => {
   beforeEach(() => {
     mockAuthService = jasmine.createSpyObj(['init', 'getUser']);
     mockAuthService.getUser.and.returnValue(subjectMockUser);
+    mockRouter = new MockRouter();
+    mockRouter.events = of(new Event('RouteConfigLoadStart'));
 
     TestBed.configureTestingModule({
       imports: [
@@ -37,7 +45,8 @@ describe('AppComponent', () => {
         AppComponent
       ],
       providers: [
-        { provide: AuthService, useValue: mockAuthService}
+        { provide: Router, useValue: mockRouter },
+        { provide: AuthService, useValue: mockAuthService }
       ],
       schemas: [NO_ERRORS_SCHEMA]
     })
@@ -55,7 +64,6 @@ describe('AppComponent', () => {
       expect(mockAuthService.getUser).toHaveBeenCalled();
       expect(component.user).toEqual(mockUser);
     });
-
   })
 
   describe('template', () => {
